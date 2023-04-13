@@ -1,11 +1,7 @@
 import React from "react";
 
 function Page04() {
-  return (
-    <div>
-      <div>Page04</div>
-    </div>
-  );
+  return <div>Page04</div>;
 }
 
 export default Page04;

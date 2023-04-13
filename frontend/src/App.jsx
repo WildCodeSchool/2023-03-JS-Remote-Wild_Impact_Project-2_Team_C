@@ -1,16 +1,18 @@
 // // US 1 import
-// import Page01 from "@pages/Page01";
+// import Page01 from "./pages/Page01";
 // // US 2 Import
-// import Page02 from "@pages/Page02";
+// import Page02 from "./pages/Page02";
 // // US 3 import
-// import Page03 from "@pages/Page03";
+// import Page03 from "./pages/Page03";
 // // US 4 import
-// import Page04 from "@pages/Page04";
+// import Page04 from "./pages/Page04";
 // // US 5 Import
-// import Page05 from "@pages/Page05";
+// import Page05 from "./pages/Page05";
 
-import Banner from "@components/Banner";
-import "./App.scss";
+import Banner from "./components/Banner";
+import "./styles/Banner.scss";
+import "./styles/Variables.scss";
+import "./styles/App.scss";
 
 function App() {
   return (

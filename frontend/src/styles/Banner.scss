@@ -1,12 +1,5 @@
 @import "./Variables.scss";
 
-body {
-  margin: 0;
-  background: $darkgrey;
-  color: $font-color;
-}
-
-//---------------------Bannière-----------------------//
 .banner {
   display: flex;
   justify-content: space-between;
@@ -40,5 +33,3 @@ img {
     font-size: 6vh;
   }
 }
-
-// -------------------------------------------------//

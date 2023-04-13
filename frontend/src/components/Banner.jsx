@@ -1,19 +1,13 @@
 import React from "react";
+import logoWildflix from "../assets/logo_wildflix.png";
+import logoCompte from "../assets/logo_compte.png";
 
 function Banner() {
   return (
     <div className="banner">
-      <img
-        src="../src/assets/logo_wildflix.png"
-        alt="logo_wildflix"
-        id="logo_wild"
-      />
+      <img src={logoWildflix} alt="logo_wildflix" id="logo_wildflix" />
       <h1> WildFlix + </h1>
-      <img
-        src="../src/assets/logo_compte.png"
-        alt="logo_compte"
-        id="logo_compte"
-      />
+      <img src={logoCompte} alt="logo_compte" id="logo_compte" />
     </div>
   );
 }

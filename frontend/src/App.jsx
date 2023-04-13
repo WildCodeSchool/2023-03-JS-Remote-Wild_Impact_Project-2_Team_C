@@ -5,7 +5,7 @@ import Page02 from "@pages/Page02";
 // US 3 import
 import Page03 from "@pages/Page03";
 // US 4 import
-import Page04 from "@pages/Page04";
+import BasketPage from "@pages/BasketPage";
 // US 5 Import
 import Page05 from "@pages/Page05";
 
@@ -22,7 +22,7 @@ function App() {
         {/** US 3 Page */}
         <Page03 />
         {/** US 4 Page */}
-        <Page04 />
+        <BasketPage />
         {/* US 5 Page */}
         <Page05 />
       </body>

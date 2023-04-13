@@ -9,12 +9,15 @@ import Page04 from "@pages/Page04";
 // US 5 Import
 import Page05 from "@pages/Page05";
 
+import Banner from "@components/Banner";
+
 import "./App.scss";
 
 function App() {
   return (
     <div className="App">
       <body>
+        <Banner />
         {/** US 1 Page */}
         <Page01 />
         {/** US 2 Page */}

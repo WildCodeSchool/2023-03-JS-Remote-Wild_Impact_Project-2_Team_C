@@ -2,12 +2,13 @@ import React from "react";
 import Banner from "@components/Banner";
 import "../styles/BasketPage.scss";
 
-
 function BasketPage() {
   return (
-    <div className="basket-page">
+    <div>
       <Banner />
-      <h1 className="basket-title"> Test </h1>
+      <div className="basket-page">
+        <h1 className="basket-title"> Panier </h1>
+      </div>
     </div>
   );
 }

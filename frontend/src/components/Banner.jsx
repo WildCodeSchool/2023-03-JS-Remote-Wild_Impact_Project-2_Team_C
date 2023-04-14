@@ -1,6 +1,7 @@
 import React from "react";
 import logoWildflix from "../assets/logo_wildflix.png";
 import logoCompte from "../assets/logo_compte.png";
+import "./styles/Banner.scss";
 
 function Banner() {
   return (

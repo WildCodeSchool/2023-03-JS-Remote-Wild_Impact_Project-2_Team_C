@@ -17,7 +17,9 @@ function DescriptionPage() {
       <p className="descFilmOverview">{film.overview}</p>
       <p className="descVoteAverage">Vote average: {film.vote_average}/10</p>
       <p className="descPrice">Price: {film.price}€</p>
-      <p className="descAddToCart">Add to cart</p>
+      <button type="button" className="descAddToCart">
+        Add to cart
+      </button>
     </div>
   );
 }

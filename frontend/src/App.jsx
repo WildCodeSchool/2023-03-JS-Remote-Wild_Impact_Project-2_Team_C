@@ -15,18 +15,16 @@ import "./styles/App.scss";
 function App() {
   return (
     <div className="App">
-      <body>
-        {/** US 1 Page */}
-        {/* <Page01 /> */}
-        {/** US 2 Page */}
-        {/* <Page02 /> */}
-        {/** US 3 Page */}
-        {/* <Page03 /> */}
-        {/** US 4 Page */}
-        <BasketPage />
-        {/* US 5 Page */}
-        {/* <Page05 /> */}
-      </body>
+      {/** US 1 Page */}
+      {/* <Page01 /> */}
+      {/** US 2 Page */}
+      {/* <Page02 /> */}
+      {/** US 3 Page */}
+      {/* <Page03 /> */}
+      {/** US 4 Page */}
+      <BasketPage />
+      {/* US 5 Page */}
+      {/* <Page05 /> */}
     </div>
   );
 }

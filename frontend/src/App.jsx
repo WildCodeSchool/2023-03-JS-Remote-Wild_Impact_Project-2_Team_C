@@ -10,7 +10,6 @@
 // import Page05 from "./pages/Page05";
 
 import Banner from "./components/Banner";
-import "./styles/Banner.scss";
 import "./styles/Variables.scss";
 import "./styles/App.scss";
 

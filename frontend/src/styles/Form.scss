@@ -7,6 +7,38 @@
   width: 50%;
   height: 500px;
   margin: auto;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  margin-top: 30%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
-
+#LastName {
+  margin-top: 10%;
+  height: 1rem;
+  width: 60%;
+}
+#FirstName {
+  margin-top: 10%;
+  height: 1rem;
+  width: 60%;
+}
+#email {
+  margin-top: 10%;
+  height: 1rem;
+  width: 60%;
+}
+#message {
+  margin-top: 10%;
+  height: 8rem;
+  width: 60%;
+}
+#labLastName {
+  margin-top: 10%;
+}
+.button {
+text-align: center;
+height: 8%;
+width: 50%;
+margin-left: 25%;
+margin-top: 10%;
+border-radius: 40px;
+}

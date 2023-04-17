@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 import React from "react";
 import "../styles/Form.scss";
 
@@ -6,8 +7,10 @@ function ContactForm() {
     <div className="form">
       <h1>Contact Us</h1>
 
-      <div>
-        <label htmlFor="LastName">Lastname :</label>
+      <div className="lastname">
+        <label className="labLastName" htmlFor="LastName">
+          Lastname :
+        </label>
         <input type="text" id="LastName" name="Lastname" />
       </div>
       <div>
@@ -22,6 +25,7 @@ function ContactForm() {
         <label htmlFor="message"> your message :</label>
         <textarea id="message" name="message" />
       </div>
+      <button className="button"> send </button>
     </div>
   );
 }

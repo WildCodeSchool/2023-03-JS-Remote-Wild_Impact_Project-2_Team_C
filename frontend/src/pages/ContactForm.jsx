@@ -6,25 +6,25 @@ function ContactForm() {
   return (
     <div className="form">
       <h1>Contact Us</h1>
-
-      <div className="lastname">
-        <label className="labLastName" htmlFor="LastName">
-          Lastname :
+      <div>
+        <label htmlFor="Fullname">
+          Full Name :
+          <input type="text" />
         </label>
-        <input type="text" id="LastName" name="Lastname" />
       </div>
       <div>
-        <label htmlFor="FirstName">Firstname :</label>
-        <input type="text" id="FirstName" name="Firstname" />
+        <label htmlFor="email">
+          Your email :
+          <input type="email" />
+        </label>
       </div>
       <div>
-        <label htmlFor="email"> your email :</label>
-        <input type="email" name="email" id="email" />
+        <label htmlFor="message">
+          your message :
+          <textarea />
+        </label>
       </div>
-      <div>
-        <label htmlFor="message"> your message :</label>
-        <textarea id="message" name="message" />
-      </div>
+
       <button className="button"> send </button>
     </div>
   );

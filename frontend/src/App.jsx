@@ -1,7 +1,8 @@
+import React from "react";
 // // US 1 import
 // import Page01 from "./pages/Page01";
 // // US 2 Import
-// import Page02 from "./pages/Page02";
+import SearchPage from "./pages/SearchPage";
 // // US 3 import
 // import Page03 from "./pages/Page03";
 // // US 4 import
@@ -9,18 +10,16 @@
 // // US 5 Import
 // import Page05 from "./pages/Page05";
 
-import Banner from "./components/Banner";
-import "./styles/Variables.scss";
+import "./styles/Banner.scss";
 import "./styles/App.scss";
 
 function App() {
   return (
     <div className="App">
-      <Banner />
       {/** US 1 Page */}
       {/* <Page01 /> */}
       {/** US 2 Page */}
-      {/* <Page02 /> */}
+      <SearchPage />
       {/** US 3 Page */}
       {/* <Page03 /> */}
       {/** US 4 Page */}

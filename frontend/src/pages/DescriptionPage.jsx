@@ -6,20 +6,22 @@ function DescriptionPage() {
   const film = films[0];
   return (
     <div className="descriptionCard">
-      <div>
+      <div className="descFilmImage">
         <img
+          className="descFilmImg"
           src={film.backdrop_path}
-          className="descFilmImage"
           alt="film_image"
         />
       </div>
       <h2 className="descOriginalTitle">{film.original_title}</h2>
-      <p className="descFilmOverview">{film.overview}</p>
-      <p className="descVoteAverage">Vote average: {film.vote_average}/10</p>
+      <p className="descVoteAverage">Viewers' votes: {film.vote_average}/10</p>
       <p className="descPrice">Price: {film.price}€</p>
-      <button type="button" className="descAddToCart">
-        Add to cart
-      </button>
+      <div className="descButtonDiv">
+        <button className="descButtonButton" type="button">
+          Add to cart
+        </button>
+      </div>
+      <p className="descFilmOverview">{film.overview}</p>
     </div>
   );
 }

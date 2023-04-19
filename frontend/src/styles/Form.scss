@@ -1,33 +1,91 @@
 @import "./Variables.scss";
 
+*{
+  border:1px solid red
+}
+
 .form{
-  width: 350px;
- height: 600px;
- position: absolute;
- left: 50%;
- top: 50%;
- transform: translate(-50%, -50%);
+ margin: 0 25%;
+ width: 50%;
+ height: 400px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
  text-align: center;
  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
 rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
+h1{
+  height: 5%;
+  font-size: 100%; 
+  margin: 0;
+}
+
 input{
   width: 60%;
-  margin-top: 10%;
-
-}
-label{
-  margin-top: 10%;
-
+  margin: 5%;
 
 }
 textarea{
-  margin-top: 10%;
-  height: 15rem;
+  margin-top: 5%;
+  height: 60px;
   width: auto;
 }
 button{
   margin-top: 10%;
 }
+}
+
+
+@media screen and (min-width:769px) {
+  
+
+  .form{
+    display:flex;
+    width: 100%;
+    height:30%;
+    margin: 0%;
+  }
+h1{
+    display: flex;
+    justify-content: flex-start;
+
+  }
+.clien{
+    display: flex;
+    width: 100%;
+   
+}
+.name{
+  width: 50%;
+}
+.email{
+  width: 50%;
+}
+input{
+  width: 40%;
+
+}
+.envoi{
+  display: flex;
+ 
+}
+
+.message{
+  display: flex;
+  justify-content: flex-start;
+
+}
+.textarea{
+  min-width: 60%;
+  min-height: 30%;
+}
+.button{
+  width: 10%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
 }

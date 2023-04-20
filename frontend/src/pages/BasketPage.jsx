@@ -1,9 +1,9 @@
 import React from "react";
-import Banner from "@components/Banner";
+import Banner from "../components/Banner";
 import "../styles/BasketPage.scss";
-import BasketContainer from "@components/BasketContainer";
-import RecoPicture from "@components/RecoPicture";
-import films from "/src/data/films";
+import BasketContainer from "../components/BasketContainer";
+import RecoPicture from "../components/RecoPicture";
+import films from "../data/films";
 
 function BasketPage() {
   return (
@@ -11,18 +11,18 @@ function BasketPage() {
       <Banner />
       <div className="basket-page">
         <h2 className="basket-title"> Panier </h2>
-        {films
-          .slice(0, 3)
-          .map((film) => <BasketContainer film={film} />)}
+        {films.slice(0, 3).map((film) => (
+          <BasketContainer film={film} />
+        ))}
         <h2 className="button-basket">Acheter</h2>
       </div>
 
       <div className="recommandation">
         <h2> Ceux qui ont acheté ces produits ont pris aussi </h2>
         <section>
-          {films
-            .slice(10, 19)
-            .map((film) => (<RecoPicture film={film} />))}
+          {films.slice(10, 19).map((film) => (
+            <RecoPicture film={film} />
+          ))}
         </section>
       </div>
     </div>

@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const RecoPicture = ({ film }) => {
-  return <img className='film-carousel' src={film.poster_path} alt={film.title} />
+function RecoPicture({ film }) {
+  return <img src={film.poster_path} alt={film.title} />;
 }
 
-export default RecoPicture
+export default RecoPicture;

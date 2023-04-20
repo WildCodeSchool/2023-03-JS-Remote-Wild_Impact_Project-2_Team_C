@@ -1,16 +1,16 @@
-import React from 'react'
+import React from "react";
 
-const BasketContainer = ({ film }) => {
+function BasketContainer({ film }) {
   return (
     <section className="basket-container">
       <img src={film.poster_path} alt={film.title} />
       <div className="recap-container">
         <h3> {film.title} </h3>
         <p> price : {film.price} €</p>
-        <h3 className='button-basket'> Supprimer </h3>
+        <h3 className="button-basket"> Supprimer </h3>
       </div>
     </section>
-  )
+  );
 }
 
-export default BasketContainer
+export default BasketContainer;

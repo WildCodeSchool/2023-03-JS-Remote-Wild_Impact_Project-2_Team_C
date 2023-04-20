@@ -1,34 +1,28 @@
 import React from "react";
 import Banner from "@components/Banner";
 import "../styles/BasketPage.scss";
+import BasketContainer from "@components/BasketContainer";
+import RecoPicture from "@components/RecoPicture";
+import films from "/src/data/films";
 
-function BasketPage({ film }) {
+function BasketPage() {
   return (
     <div>
       <Banner />
       <div className="basket-page">
         <h2 className="basket-title"> Panier </h2>
-        <section className="basket-container">
-          <img src={film.poster_path} alt={film.title} />
-          <div className="recap-container">
-            <h3> {film.title} </h3>
-            <p> price : {film.price} </p>
-          </div>
-        </section>
+        {films
+          .slice(0, 3)
+          .map((film) => <BasketContainer film={film} />)}
+        <h2 className="button-basket">Acheter</h2>
       </div>
-      <button type="button" className="btn-paid">
-        Acheter
-      </button>
-      <div className="recommandation">
-        <h2> Ceux qui ont achetés ces produits ont pris aussi </h2>
 
-        <section className="reco-picture">
-          <img src={film.poster_path} alt={film.title} />
-          <img src={film.poster_path} alt={film.title} />
-          <img src={film.poster_path} alt={film.title} />
-          <img src={film.poster_path} alt={film.title} />
-          <img src={film.poster_path} alt={film.title} />
-          <img src={film.poster_path} alt={film.title} />
+      <div className="recommandation">
+        <h2> Ceux qui ont acheté ces produits ont pris aussi </h2>
+        <section>
+          {films
+            .slice(10, 19)
+            .map((film) => (<RecoPicture film={film} />))}
         </section>
       </div>
     </div>

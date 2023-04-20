@@ -11,7 +11,6 @@ import BasketPage from "./pages/BasketPage";
 
 import "./styles/Variables.scss";
 import "./styles/App.scss";
-import films from "./data/films";
 
 function App() {
   return (
@@ -23,7 +22,7 @@ function App() {
       {/** US 3 Page */}
       {/* <Page03 /> */}
       {/** US 4 Page */}
-      <BasketPage film={films[0]} />
+      <BasketPage />
       {/* US 5 Page */}
       {/* <Page05 /> */}
     </div>

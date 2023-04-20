@@ -3,7 +3,7 @@
 .basket-page {
   margin: 0;
   padding: 0;
-  font-family: $font-family-text;
+  font-family: $font-family-text ;
 
   h2 {
     padding: 1% 10%;
@@ -21,7 +21,13 @@
   img {
     width: 100%;
     border-radius: 20px;
-    box-shadow: $shadow;
+
+  }
+
+  .total-basket {
+    text-align: center;
+    margin: 5% 5% 0 50%;
+    border: 2px white solid
   }
 
   .button-basket {
@@ -34,6 +40,7 @@
     border: 2px solid whitesmoke;
   }
 }
+
 
 .basket-container {
   display: grid;
@@ -58,10 +65,12 @@
   }
 }
 
+
+
 .recommandation {
   margin: 0;
   padding: 0;
-  font-family: $font-family-text;
+  font-family: $font-family-text ;
 
   h2 {
     background-color: $bordeaux;
@@ -81,4 +90,5 @@
     flex-flow: auto;
     margin: 2% 5%;
   }
+
 }

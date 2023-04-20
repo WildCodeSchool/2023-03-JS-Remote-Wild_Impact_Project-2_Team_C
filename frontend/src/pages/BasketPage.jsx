@@ -14,7 +14,10 @@ function BasketPage() {
         {films.slice(0, 3).map((film) => (
           <BasketContainer film={film} />
         ))}
-        <h2 className="total-basket"> Total : x €</h2>
+
+        <h2 className="total-basket">
+          Total : {films.slice(0, 1).map((film) => film.price)} €
+        </h2>
         <h2 className="button-basket">Acheter</h2>
       </div>
 

@@ -21,13 +21,13 @@ function ContactForm() {
         </div>
       </div>
       <div className="envoi">
-        <div>
+        <div className="divmessage">
           <label className="message">
             votre message :
             <textarea className="textarea" />
           </label>
         </div>
-        <div className="button">
+        <div className="divbutton">
           <button> envoyer </button>
         </div>
       </div>

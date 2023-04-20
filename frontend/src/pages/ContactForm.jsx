@@ -22,10 +22,8 @@ function ContactForm() {
       </div>
       <div className="envoi">
         <div className="divmessage">
-          <label className="message">
-            votre message :
-            <textarea className="textarea" />
-          </label>
+          votre message :
+          <textarea className="textarea" />
         </div>
         <div className="divbutton">
           <button> envoyer </button>

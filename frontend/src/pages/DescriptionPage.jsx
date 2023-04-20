@@ -1,5 +1,5 @@
 import React from "react";
-import FilmDescCard from "@components/FilmDescCard";
+import FilmDescCard from "../components/FilmDescCard";
 import films from "../data/films";
 
 import "../styles/DescriptionPage.scss";

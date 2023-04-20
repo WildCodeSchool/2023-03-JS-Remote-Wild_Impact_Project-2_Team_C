@@ -52,14 +52,24 @@
     margin-top: 1em; 
   }
   
-  .descButtonButton{
+  .descAddButton{
     font-family: $font-family-text;
     background-color: #50B2C0;
-    font-weight: bold;
     font-size: 1.5em; 
     border: 1px solid #FAF9F9; 
     border-radius: 25px; 
     border-width: 5px; 
+    padding: 0.5rem; 
+  }
+
+  .descAddedButton{
+    font-family: $font-family-text;
+    background-color: #02020B;
+    color: #50B2C0;
+    font-size: 1.5em; 
+    border-radius: 25px; 
+    border-width: 5px; 
+    padding: 0.5rem;
   }
   
   .descFilmOverview {
@@ -76,6 +86,24 @@
     box-shadow: 32px 33px 157px -36px rgba(242,238,238,0.71);
   -webkit-box-shadow: 32px 33px 157px -36px rgba(242,238,238,0.71);
   -moz-box-shadow: 32px 33px 157px -36px rgba(242,238,238,0.71);
+  }
+
+  .descBackButtonDiv {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em; 
+    margin-top: 1em; 
+  }
+  
+  .descBackButton{
+    font-family: $font-family-text;
+    background-color: #A10B0B;
+    color: #FAF9F9;
+    font-weight: bold;
+    font-size: 1.5em; 
+    border: 1px solid #FAF9F9; 
+    border-radius: 25px; 
+    border-width: 5px; 
   }
 }
 
@@ -129,7 +157,7 @@
     margin-top: 1em; 
   }
   
-  .descButtonButton{
+  .descAddButton{
     font-family: $font-family-text;
     background-color: #50B2C0;
     font-weight: bold;
@@ -137,6 +165,18 @@
     border: 1px solid #FAF9F9; 
     border-radius: 25px; 
     border-width: 5px; 
+    padding: 0.5rem;
+  }
+
+  .descAddedButton{
+    font-family: $font-family-text;
+    background-color: #02020B;
+    color: #50B2C0;
+    font-weight: bold;
+    font-size: 1.5em; 
+    border-radius: 25px; 
+    border-width: 5px; 
+    padding: 0.5rem;
   }
   
   .descFilmOverview {
@@ -145,7 +185,7 @@
     font-size: 1.5em; 
     font-family: $font-family-text;
     margin-inline: 20%; 
-    border: 1px solid #FAF9F9; 
+    border: 0.8px solid #FAF9F9; 
     border-radius: 25px; 
     border-width: 5px; 
     padding: 1em; 
@@ -153,5 +193,23 @@
     box-shadow: 32px 33px 157px -36px rgba(242,238,238,0.71);
   -webkit-box-shadow: 32px 33px 157px -36px rgba(242,238,238,0.71);
   -moz-box-shadow: 32px 33px 157px -36px rgba(242,238,238,0.71);
+  }
+
+  .descBackButtonDiv {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em; 
+    margin-top: 1em; 
+  }
+  
+  .descBackButton{
+    font-family: $font-family-text;
+    background-color: #A10B0B;
+    color: #FAF9F9;
+    font-weight: bold;
+    font-size: 1.5em; 
+    border: 1px solid #FAF9F9; 
+    border-radius: 25px; 
+    border-width: 5px; 
   }
 }

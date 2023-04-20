@@ -1,14 +1,22 @@
 import React, { useState } from "react";
 
 function AddToCartBtn() {
-  const [addToCart, setAddToCart] = useState();
-
+  const [addToCartMessage, setAddToCartMessage] = useState(true);
+  function handleClick() {
+    setAddToCartMessage(!addToCartMessage);
+  }
   return (
     <div>
       <div className="descButtonDiv">
-        <button className="descButtonButton" type="button">
-          Add to cart
-        </button>
+        {addToCartMessage ? (
+          <button className="descAddButton" type="button" onClick={handleClick}>
+            Add to your cart
+          </button>
+        ) : (
+          <button className="descAddedButton" type="button">
+            Successfully added to your cart
+          </button>
+        )}
       </div>
     </div>
   );

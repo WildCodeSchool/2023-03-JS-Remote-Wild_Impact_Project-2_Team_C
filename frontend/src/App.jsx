@@ -8,13 +8,14 @@
 import BasketPage from "./pages/BasketPage";
 // // US 5 Import
 // import Page05 from "./pages/Page05";
-
 import "./styles/Variables.scss";
 import "./styles/App.scss";
+import Banner from "./components/Banner";
 
 function App() {
   return (
     <div className="App">
+      <Banner />
       {/** US 1 Page */}
       {/* <Page01 /> */}
       {/** US 2 Page */}

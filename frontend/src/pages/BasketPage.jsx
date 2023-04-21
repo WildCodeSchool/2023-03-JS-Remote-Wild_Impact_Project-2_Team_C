@@ -1,5 +1,4 @@
 import React from "react";
-import Banner from "../components/Banner";
 import "../styles/BasketPage.scss";
 import BasketContainer from "../components/BasketContainer";
 import RecoPicture from "../components/RecoPicture";
@@ -8,7 +7,6 @@ import films from "../data/films";
 function BasketPage() {
   return (
     <div>
-      <Banner />
       <div className="basket-page">
         <h2 className="basket-title"> Panier </h2>
         <div className="orga">

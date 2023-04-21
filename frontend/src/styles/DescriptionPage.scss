@@ -1,0 +1,212 @@
+@import "./Variables.scss";
+
+  .descFilmImage {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em; 
+  }
+  
+  .descFilmImg {
+    width: 75%;
+    height: 75%;
+    border: 1px solid #FAF9F9; 
+    border-radius: 25px; 
+    border-width: 5px; 
+  }
+  
+  .descOriginalTitle {
+    display: flex;
+    justify-content: center;
+    font-size: 2.2em; 
+    font-family: $font-family-title;
+    color: #FAF9F9; 
+    margin-bottom: 0.5em; 
+  }
+  
+  .descVoteAverage {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em; 
+    font-family: $font-family-text;
+    color: #FAF9F9; 
+    padding-right: 1em; 
+    margin-bottom: 0em; 
+  }
+
+  .descPrice {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em; 
+    font-family: $font-family-text;
+    color: #FAF9F9; 
+    padding-right: 1em;
+    margin-top: 0px; 
+  }
+  
+  .descButtonDiv {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em; 
+    margin-top: 1em; 
+  }
+  
+  .descAddButton{
+    font-family: $font-family-text;
+    background-color: #50B2C0;
+    font-size: 1.5em; 
+    border: 1px solid #FAF9F9; 
+    border-radius: 25px; 
+    border-width: 5px; 
+    padding: 0.5rem; 
+  }
+
+  .descAddedButton{
+    font-family: $font-family-text;
+    background-color: #02020B;
+    color: #50B2C0;
+    font-size: 1.5em; 
+    border-radius: 25px; 
+    border-width: 5px; 
+    padding: 0.5rem;
+  }
+  
+  .descFilmOverview {
+    display: flex;
+    text-align: justify;
+    font-size: 1.5em; 
+    font-family: $font-family-text;
+    margin-inline: 1em; 
+    border: 1px solid #FAF9F9; 
+    border-radius: 25px; 
+    border-width: 5px; 
+    padding: 1em; 
+    color: #FAF9F9; 
+    box-shadow: 32px 33px 157px -36px rgba(242,238,238,0.71);
+  -webkit-box-shadow: 32px 33px 157px -36px rgba(242,238,238,0.71);
+  -moz-box-shadow: 32px 33px 157px -36px rgba(242,238,238,0.71);
+  }
+
+  .descBackButtonDiv {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em; 
+    margin-top: 1em; 
+  }
+  
+  .descBackButton{
+    font-family: $font-family-text;
+    background-color: #A10B0B;
+    color: #FAF9F9;
+    font-weight: bold;
+    font-size: 1.5em; 
+    border: 1px solid #FAF9F9; 
+    border-radius: 25px; 
+    border-width: 5px; 
+  }
+
+
+@media screen and (min-width: 768px) {
+  .descFilmImage {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em; 
+  }
+  
+  .descFilmImg {
+    width: 45%;
+    height: 45%;
+    border: 1px solid #FAF9F9; 
+    border-radius: 25px; 
+    border-width: 5px; 
+  }
+  
+  .descOriginalTitle {
+    display: flex;
+    justify-content: center;
+    font-size: 3em; 
+    font-family: $font-family-title;
+    color: #FAF9F9; 
+    margin-bottom: 0.5em; 
+  }
+  
+  .descVoteAverage {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em; 
+    font-family: $font-family-text;
+    color: #FAF9F9; 
+    margin-bottom: 0em; 
+  }
+
+  .descPrice {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em; 
+    font-family: $font-family-text;
+    color: #FAF9F9; 
+    margin-top: 0px; 
+  }
+  
+  .descButtonDiv {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em; 
+    margin-top: 1em; 
+  }
+  
+  .descAddButton{
+    font-family: $font-family-text;
+    background-color: #50B2C0;
+    font-weight: bold;
+    font-size: 1.5em; 
+    border: 1px solid #FAF9F9; 
+    border-radius: 25px; 
+    border-width: 5px; 
+    padding: 0.5rem;
+  }
+
+  .descAddedButton{
+    font-family: $font-family-text;
+    background-color: #02020B;
+    color: #50B2C0;
+    font-weight: bold;
+    font-size: 1.5em; 
+    border-radius: 25px; 
+    border-width: 5px; 
+    padding: 0.5rem;
+  }
+  
+  .descFilmOverview {
+    display: flex;
+    text-align: justify;
+    font-size: 1.5em; 
+    font-family: $font-family-text;
+    margin-inline: 20%; 
+    border: 0.8px solid #FAF9F9; 
+    border-radius: 25px; 
+    border-width: 5px; 
+    padding: 1em; 
+    color: #FAF9F9; 
+    box-shadow: 32px 33px 157px -36px rgba(242,238,238,0.71);
+  -webkit-box-shadow: 32px 33px 157px -36px rgba(242,238,238,0.71);
+  -moz-box-shadow: 32px 33px 157px -36px rgba(242,238,238,0.71);
+  }
+
+  .descBackButtonDiv {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em; 
+    margin-top: 1em; 
+  }
+  
+  .descBackButton{
+    font-family: $font-family-text;
+    background-color: #A10B0B;
+    color: #FAF9F9;
+    font-weight: bold;
+    font-size: 1.5em; 
+    border: 1px solid #FAF9F9; 
+    border-radius: 25px; 
+    border-width: 5px; 
+  }
+}

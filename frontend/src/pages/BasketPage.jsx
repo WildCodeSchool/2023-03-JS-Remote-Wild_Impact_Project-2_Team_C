@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/BasketPage.scss";
 import BasketContainer from "../components/BasketContainer";
 import RecoPicture from "../components/RecoPicture";
 import films from "../data/films";
 
 function BasketPage() {
+  const [buy, setBuy] = useState("Buy");
   return (
     <div>
       <div className="basket-page">
@@ -15,7 +16,13 @@ function BasketPage() {
           ))}
         </div>
         <h2 className="basket-total">Total : X €</h2>
-        <h2 className="basket-button">Acheter</h2>
+        <button
+          type="button"
+          className="basket-button"
+          onClick={() => setBuy("Paid confirm, Thank you !")}
+        >
+          {buy}{" "}
+        </button>
       </div>
 
       <div className="recommandation">

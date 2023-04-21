@@ -1,6 +1,5 @@
-/* eslint-disable react/button-has-type */
 import React from "react";
-import "../styles/Form.scss";
+import "../styles/ContactForm.scss";
 
 function ContactForm() {
   return (
@@ -23,7 +22,7 @@ function ContactForm() {
           <textarea className="textarea" />
         </div>
         <div className="divbutton">
-          <button> send </button>
+          <button type="button"> send </button>
         </div>
       </div>
     </div>

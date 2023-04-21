@@ -5,7 +5,7 @@ import React from "react";
 // import Page02 from "./pages/Page02";
 import DescriptionPage from "./pages/DescriptionPage";
 // // US 4 import
-// import Page04 from "./pages/Page04";
+import BasketPage from "./pages/BasketPage";
 // // US 5 Import
 // import Page05 from "./pages/Page05";
 

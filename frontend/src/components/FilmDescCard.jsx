@@ -14,8 +14,7 @@ function FilmDescCard({ film }) {
       </div>
       <div>
         <h2 className="descOriginalTitle">{film.original_title}</h2>
-        <p 
-          className="descVoteAverage">
+        <p className="descVoteAverage">
           Viewers' votes: {film.vote_average}/10
         </p>
         <p className="descPrice">Price: {film.price}€</p>

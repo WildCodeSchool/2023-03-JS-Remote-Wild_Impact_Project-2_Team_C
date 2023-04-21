@@ -4,8 +4,8 @@ import "../styles/ContactForm.scss";
 function ContactForm() {
   return (
     <div className="form">
-      <h1>Contact us</h1>
-      <div className="clien">
+      <h6>Contact us</h6>
+      <div className="client">
         <label id="Fullname">
           Name:
           <input type="text" />

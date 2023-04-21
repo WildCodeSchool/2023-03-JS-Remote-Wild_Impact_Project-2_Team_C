@@ -14,8 +14,8 @@ function BasketPage() {
             <BasketContainer film={film} />
           ))}
         </div>
-        <h2 className="total-basket">Total : X €</h2>
-        <h2 className="button-basket">Acheter</h2>
+        <h2 className="basket-total">Total : X €</h2>
+        <h2 className="basket-button">Acheter</h2>
       </div>
 
       <div className="recommandation">

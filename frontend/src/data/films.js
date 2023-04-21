@@ -175,7 +175,7 @@ const films = [
     release_date: "2022-09-07",
     title: "Pinocchio",
     video: false,
-    vote_average: 6.7,
+    vote_average: 5.7,
     vote_count: 865,
     price: 7,
   },

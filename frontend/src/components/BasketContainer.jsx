@@ -7,7 +7,7 @@ function BasketContainer({ film }) {
       <div className="recap-container">
         <h3> {film.title} </h3>
         <p> price : {film.price} €</p>
-        <h4 className="button-basket"> Supprimer </h4>
+        <h4 className="basket-basket"> Supprimer </h4>
       </div>
     </section>
   );

@@ -25,7 +25,7 @@ function App() {
       {/** US 4 Page */}
       <DescriptionPage />
       {/** US 4 Page */}
-        <BasketPage />
+      <BasketPage />
       {/* US 5 Page */}
       {/* <Page05 /> */}
     </div>

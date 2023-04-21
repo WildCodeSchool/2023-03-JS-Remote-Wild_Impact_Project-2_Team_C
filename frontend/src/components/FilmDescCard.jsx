@@ -12,12 +12,14 @@ function FilmDescCard({ film }) {
           alt="film_image"
         />
       </div>
+      <div>
       <h2 className="descOriginalTitle">{film.original_title}</h2>
       <p className="descVoteAverage">Viewers' votes: {film.vote_average}/10</p>
       <p className="descPrice">Price: {film.price}€</p>
       <AddToCartBtn />
       <p className="descFilmOverview">{film.overview}</p>
       <BackBtn />
+      </div>
     </div>
   );
 }

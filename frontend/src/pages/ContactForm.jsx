@@ -5,28 +5,25 @@ import "../styles/Form.scss";
 function ContactForm() {
   return (
     <div className="form">
-      <h1>Contact US</h1>
+      <h1>Contact us</h1>
       <div className="clien">
-        <div className="name">
-          <label id="Fullname">
-            Name/Lastname :
-            <input type="text" />
-          </label>
-        </div>
-        <div className="email">
-          <label id="Email">
-            Email :
-            <input type="email" />
-          </label>
-        </div>
+        <label id="Fullname">
+          Name:
+          <input type="text" />
+        </label>
+
+        <label id="Email">
+          Email:
+          <input type="email" />
+        </label>
       </div>
       <div className="envoi">
         <div className="divmessage">
-          Your Message :
+          message:
           <textarea className="textarea" />
         </div>
         <div className="divbutton">
-          <button> envoyer </button>
+          <button> send </button>
         </div>
       </div>
     </div>

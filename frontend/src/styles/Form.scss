@@ -27,6 +27,7 @@
   }
   textarea {
     resize: none;
+    height: 6rem;
   }
   button {
     margin-top: 10%;
@@ -36,9 +37,9 @@
 @media screen and (min-width: 769px) {
   .form {
     display: flex;
-    //width: 100%;
+    width: 70%;
     height: 30%;
-    margin: 0 20%;
+    margin: 0 15%;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
       rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -49,22 +50,20 @@
   }
   .clien {
     display: flex;
+  }
+  .Fullname {
+    display: flex;
+  }
+
+  label {
     width: 100%;
-  }
-  .name {
-    width: 50%;
-  }
-  .email {
-    width: 50%;
-  }
-  input {
-    width: 10px;
   }
 
   .envoi {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 50%;
   }
   .divmessage {
     width: 100%;
@@ -79,7 +78,7 @@
     justify-content: flex-start;
   }
   .textarea {
-    margin: 0;
+    margin-left: 3%;
     min-width: 80%;
     min-height: 100%;
   }
@@ -87,5 +86,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 0.6rem;
   }
 }

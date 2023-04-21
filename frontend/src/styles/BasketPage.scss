@@ -19,14 +19,13 @@
   }
 
   img {
-    width: 100%;
+    width: 90%;
     border-radius: 20px;
   }
 
   .total-basket {
     text-align: center;
     margin: 5% 5% 0 45%;
-    border: 2px white solid;
   }
 
   .button-basket {
@@ -42,7 +41,8 @@
 
 .basket-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  width: 300px;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
 
   img {
@@ -52,7 +52,7 @@
 
   .recap-container {
     grid-row: 1;
-    grid-column: 2/4;
+    grid-column: 2/3;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,5 +85,38 @@
     display: flex;
     flex-flow: auto;
     margin: 2% 5%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .basket-page {
+    section {
+      margin: 2% 5%;
+    }
+
+    .total-basket {
+      margin: 1% 5% 0 65%;
+    }
+  }
+
+  .orga {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .basket-container {
+    margin: 0;
+    width: 400px;
+    gap: 10%;
+
+    img {
+      width: 75%;
+    }
+  }
+
+  .recommandation {
+    img {
+      width: 10%;
+    }
   }
 }

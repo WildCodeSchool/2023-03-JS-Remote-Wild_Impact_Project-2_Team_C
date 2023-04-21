@@ -11,13 +11,12 @@ function BasketPage() {
       <Banner />
       <div className="basket-page">
         <h2 className="basket-title"> Panier </h2>
-        {films.slice(0, 3).map((film) => (
-          <BasketContainer film={film} />
-        ))}
-
-        <h2 className="total-basket">
-          Total : {films.slice(0, 1).map((film) => film.price)} €
-        </h2>
+        <div className="orga">
+          {films.slice(0, 3).map((film) => (
+            <BasketContainer film={film} />
+          ))}
+        </div>
+        <h2 className="total-basket">Total : X €</h2>
         <h2 className="button-basket">Acheter</h2>
       </div>
 

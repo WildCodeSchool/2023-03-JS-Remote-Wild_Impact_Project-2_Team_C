@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/ContactForm.scss";
 
 function ContactForm() {
+  const [name, setName] = useState("");
+
   return (
     <div className="form">
       <h6>Contact us</h6>
       <div className="client">
         <label id="Fullname">
           Name:
-          <input type="text" />
+          <input
+            type="text"
+            name="name"
+            value={name}
+            placeholder="Fullname"
+            onChange={(e) => setName(e.target.value)}
+          />
         </label>
 
         <label id="Email">

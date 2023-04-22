@@ -3,6 +3,7 @@ import "../styles/ContactForm.scss";
 
 function ContactForm() {
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
 
   return (
     <div className="form">
@@ -14,14 +15,16 @@ function ContactForm() {
             type="text"
             name="name"
             value={name}
-            placeholder="Fullname"
             onChange={(e) => setName(e.target.value)}
           />
         </label>
-
         <label id="Email">
           Email:
-          <input type="email" />
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </label>
       </div>
       <div className="envoi">

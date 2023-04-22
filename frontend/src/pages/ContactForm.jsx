@@ -4,6 +4,7 @@ import "../styles/ContactForm.scss";
 function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   return (
     <div className="form">
@@ -30,7 +31,11 @@ function ContactForm() {
       <div className="envoi">
         <div className="divmessage">
           message:
-          <textarea className="textarea" />
+          <textarea
+            className="textarea"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
         </div>
         <div className="divbutton">
           <button type="button"> send </button>

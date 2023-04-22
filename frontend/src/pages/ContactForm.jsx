@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import React, { useState } from "react";
 import "../styles/ContactForm.scss";
 
@@ -5,6 +6,10 @@ function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const submit = () => {
+    alert("your message has been sent");
+  };
 
   return (
     <div className="form">
@@ -34,11 +39,13 @@ function ContactForm() {
           <textarea
             className="textarea"
             value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            onChange={(e) => setMessage(e.target.value.substring(0, 200))}
           />
         </div>
         <div className="divbutton">
-          <button type="button"> send </button>
+          <button type="button" onClick={submit}>
+            send
+          </button>
         </div>
       </div>
     </div>

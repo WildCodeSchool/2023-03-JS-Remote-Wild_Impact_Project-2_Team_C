@@ -7,7 +7,7 @@ import DescriptionPage from "./pages/DescriptionPage";
 // // US 4 import
 // import Page04 from "./pages/Page04";
 // // US 5 Import
-// import Page05 from "./pages/Page05";
+import ContactForm from "./pages/ContactForm";
 
 import Banner from "./components/Banner";
 import "./styles/Variables.scss";
@@ -26,7 +26,7 @@ function App() {
       {/** US 4 Page */}
       {/* <Page04 /> */}
       {/* US 5 Page */}
-      {/* <Page05 /> */}
+      <ContactForm />
     </div>
   );
 }

@@ -27,5 +27,19 @@ INSERT INTO films (adult, backdrop_path, genre_ids, original_language, original_
 INSERT INTO films (adult, backdrop_path, genre_ids, original_language, original_title, overview, popularity, poster_path, release_date, title, video, vote_average, vote_count, price)
 VALUES (false, "https://image.tmdb.org/t/p/w500/cOF0InT1qQVUeNjqxjF7gtEtL5L.jpg", "Thriller", "en", "Fall", "For best friends Becky and Hunter, life is all about conquering fears and pushing limits. But after they climb 2,000 feet to the top of a remote, abandoned radio tower, they find themselves stranded with no way down. Now Becky and Hunter’s expert climbing skills will be put to the ultimate test as they desperately fight to survive the elements, a lack of supplies, and vertigo-inducing heights", 5456.118, "https://image.tmdb.org/t/p/w500/spCAxD99U1A6jsiePFoqdEcY0dG.jpg", "2022-08-11", "Fall", false, 7.4, 300, 11);
 
-
+INSERT INTO films (adult, backdrop_path, genre_ids, original_language, original_title, overview, popularity, poster_path, release_date, title, video, vote_average, vote_count, price) 
+VALUES (false,
+"https://image.tmdb.org/t/p/w500/ghsPsvM0sEztdNT4kUlTsBF2LEF.jpg", 
+"Drama", 
+"fr", 
+"Athena", 
+"Hours after the tragic death of their youngest brother in unexplained circumstances, three siblings have their lives thrown into chaos.", 
+4089.775, 
+"https://image.tmdb.org/t/p/w500/fenNPxVF5ERy0CSyVruuEg959Hg.jpg", 
+"2022-09-09", 
+"Athena", 
+false, 
+6.6, 
+223, 
+7);
 

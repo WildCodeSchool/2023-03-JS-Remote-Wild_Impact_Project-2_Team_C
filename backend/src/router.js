@@ -13,19 +13,26 @@ database
     console.error(err);
   });
 
-// const itemControllers = require("./controllers/itemControllers");
-
-// router.post("/films", database.add);
-// router.delete("/films/:id", database.destroy);
-
+// http://localhost:5000 => HomePage
 router.get("/", (req, res) => {
   res.status(200).send("Ceci est la HomePage");
 });
-// router.get("/films", ); => Jerem
-// router.get("/films/:id", database.read); => Camille Page
 
-// http://localhost:5000 => HomePage
 // http://localhost:5000/films => SearchPage
-// http://localhost:5000/films/:id => DescribePage
+router.get("/films", (req, res) => {
+  res.status(200).send("Ceci est la SearchPage");
+});
+
+// http://localhost:5000/films/:id => DescriptionPage
+router.get("/films/:id", (req, res) => {
+  res
+    .status(200)
+    .send("Ceci est une page qui vous présente un film en particulier");
+});
+
+// http://localhost:5000/films/:id/panier => Panier
+// router.get("/films/:id/panier", (req, res) => {
+//  res.status(200).send("Bienvenue dans votre panier, achete vite stp, prend en 4 minimum pls, j'ai des gosses a nourrir");
+// });
 
 module.exports = router;

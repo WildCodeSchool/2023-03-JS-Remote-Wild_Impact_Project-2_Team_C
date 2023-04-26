@@ -32,11 +32,12 @@ router.get("/films/:id", (req, res) => {
 
 // localhost:5000/panier => BasketPage
 router.get("/panier", (req, res) => {
-  res
-    .status(200)
-    .send(
-      "Bienvenue dans votre panier, achete vite stp, prend en 4 minimum pls, j'ai des gosses a nourrir"
-    );
+  res.status(200).send("Bienvenue dans votre panier");
+});
+
+// localhost:5000/watchlist => WatchlistPage
+router.get("/watchlist", (req, res) => {
+  res.status(200).send("Page qui montre les films achetés");
 });
 
 module.exports = router;

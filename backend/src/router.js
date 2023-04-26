@@ -30,9 +30,13 @@ router.get("/films/:id", (req, res) => {
     .send("Ceci est une page qui vous présente un film en particulier");
 });
 
-// http://localhost:5000/films/:id/panier => Panier
-// router.get("/films/:id/panier", (req, res) => {
-//  res.status(200).send("Bienvenue dans votre panier, achete vite stp, prend en 4 minimum pls, j'ai des gosses a nourrir");
-// });
+// localhost:5000/panier => BasketPage
+router.get("/panier", (req, res) => {
+  res
+    .status(200)
+    .send(
+      "Bienvenue dans votre panier, achete vite stp, prend en 4 minimum pls, j'ai des gosses a nourrir"
+    );
+});
 
 module.exports = router;

@@ -15,10 +15,17 @@ database
 
 // const itemControllers = require("./controllers/itemControllers");
 
-// router.get("/items", itemControllers.browse);
-// router.get("/items/:id", itemControllers.read);
-// router.put("/items/:id", itemControllers.edit);
-// router.post("/items", itemControllers.add);
-// router.delete("/items/:id", itemControllers.destroy);
+// router.post("/films", database.add);
+// router.delete("/films/:id", database.destroy);
+
+router.get("/", (req, res) => {
+  res.status(200).send("Ceci est la HomePage");
+});
+// router.get("/films", ); => Jerem
+// router.get("/films/:id", database.read); => Camille Page
+
+// http://localhost:5000 => HomePage
+// http://localhost:5000/films => SearchPage
+// http://localhost:5000/films/:id => DescribePage
 
 module.exports = router;

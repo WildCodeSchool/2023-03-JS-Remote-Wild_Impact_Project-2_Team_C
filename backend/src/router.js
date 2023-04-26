@@ -2,9 +2,9 @@ const express = require("express");
 
 const router = express.Router();
 
-const connection = require("./database");
+const database = require("./database");
 
-connection
+database
   .getConnection()
   .then(() => {
     console.info("Can reach database");

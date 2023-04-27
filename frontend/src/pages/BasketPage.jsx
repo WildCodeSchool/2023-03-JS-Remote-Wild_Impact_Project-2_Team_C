@@ -9,24 +9,24 @@ function BasketPage() {
   return (
     <div>
       <div className="basket-page">
-        <h2 className="basket-title"> Panier </h2>
-        <div className="orga">
+        <h2 className="basket-page-title"> Panier </h2>
+        <div className="basket-page-orga">
           {films.slice(0, 3).map((film) => (
             <BasketContainer film={film} />
           ))}
         </div>
-        <h2 className="basket-total">Total : X €</h2>
+        <h2 className="basket-page-total">Total : X €</h2>
         <button
           type="button"
-          className="basket-button"
+          className="basket-page-button"
           onClick={() => setBuy("Paid confirm, Thank you !")}
         >
           {buy}{" "}
         </button>
       </div>
 
-      <div className="recommandation">
-        <h2> Ceux qui ont acheté ces produits ont pris aussi </h2>
+      <div className="basket-page-recommandation">
+        <h2> Si vous avez aimé ces films, vouz aimerez également </h2>
         <section>
           {films.slice(10, 19).map((film) => (
             <RecoPicture film={film} />

@@ -13,10 +13,26 @@ database
     console.error(err);
   });
 
-// http://localhost:5000 => HomePage un router.get/carrousel récupère params de catégories
-router.get("/", (req, res) => {
+// value.push(Horror)
+//      http:// localhost:3000/home => HOMEPAGE => FRONTEND
+// fetch("http://localhost5000/carrousel/?type=genres_ids&genre=Horror") => BACKEND
+
+router.get("/carrousel", (req, res) => {
+  let url = "SELECT * FROM films";
+  const value = [];
+  if (req.query.type === "genre_ids") {
+    url += " WHERE genre_ids = ? LIMIT 8";
+    value.push(req.query.genre);
+  }
+  if (req.query.type === "original_language") {
+    url += " WHERE original_language != 'en' LIMIT 8";
+  }
+  if (req.query.type === "price" || req.query.type === "popularity") {
+    url += " WHERE ? >= ? LIMIT 8";
+    value.push(req.query.type, req.query.genre);
+  }
   database
-    .query("SELECT * FROM films")
+    .query(url, value)
     .then(([films]) => {
       res.json(films);
     })
@@ -26,34 +42,55 @@ router.get("/", (req, res) => {
     });
 });
 
-// http://localhost:5000/films => SearchPage ajouter params selon filtres
 router.get("/films", (req, res) => {
-  res.status(200).send("Ceci est la SearchPage");
+  let url = "SELECT * FROM films";
+  const value = [];
+  // Mon filtre GENRE
+  if (req.query.type === "genre_ids") {
+    url += " WHERE genre_ids = ? ";
+    value.push(req.query.genre);
+  }
+  // Mon input RECHERCHE
+  if (req.query.type === "title") {
+    url += " WHERE title = ? ";
+    value.push(req.query.genre);
+  }
+  // Mon filtre PRICE ET DATE =>
+  if (req.query.type === "price") {
+    url += " WHERE price >= ? ";
+    value.push(req.query.genre);
+  }
+  if (req.query.type === "release_date") {
+    url += " WHERE release_date LIKE ?";
+    value.push(`${req.query.genre}%`);
+  }
+  database
+    .query(url, value)
+    .then(([films]) => {
+      res.json(films);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send("Error retrieving data from database");
+    });
 });
 
-// http://localhost:5000/films/:id => DescriptionPage
 router.get("/films/:id", (req, res) => {
-  res
-    .status(200)
-    .send("Ceci est une page qui vous présente un film en particulier");
+  const id = +req.params.id;
+
+  database
+    .query("SELECT * FROM films WHERE id = ?", [id])
+    .then(([films]) => {
+      if (films[0] != null) {
+        res.json(films[0]);
+      } else {
+        res.status(404).send("Not Found");
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send("Error retrieving data from database");
+    });
 });
-
-// const getUsers = (req, res) => {
-//   database
-//     .query("select * from users")
-//     .then(([users]) => {
-//       res.json(users);
-//     })
-//     .catch((err) => {
-//       console.error(err);
-//       res.status(500).send("Error retrieving data from database");
-//     });
-// };
-
-const getGens = (req, res) => {
-  res.send("Hello les Gens");
-};
-
-router.get("/home", getGens);
 
 module.exports = router;

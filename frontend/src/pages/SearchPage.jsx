@@ -81,6 +81,28 @@ function SearchPage() {
               (film.genre_ids === category || category === "All")
             );
           })
+          .sort((film1, film2) => {
+            if (date === "1") {
+              return (
+                new Date(film1.release_date) - new Date(film2.release_date)
+              );
+            }
+            if (date === "2") {
+              return (
+                new Date(film2.release_date) - new Date(film1.release_date)
+              );
+            }
+            return 0;
+          })
+          .sort((film1, film2) => {
+            if (price === "1") {
+              return film1.price - film2.price;
+            }
+            if (price === "2") {
+              return film2.price - film1.price;
+            }
+            return 0;
+          })
           .map((film) => (
             <FilmCard film={film} key={film.id} />
           ))}

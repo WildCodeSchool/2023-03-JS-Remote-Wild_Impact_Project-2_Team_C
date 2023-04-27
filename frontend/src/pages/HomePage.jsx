@@ -5,7 +5,7 @@ import SimpleSlider from "../components/SimpleSlider";
 
 function HomePage() {
   return (
-    <div className="Page1">
+    <div className="PageAcceuil">
       <Banner />
       <SimpleSlider
         title="Les films du moment"
@@ -25,10 +25,10 @@ function HomePage() {
       <SimpleSlider
         title="Comédie/Animation"
         propriete="genre_ids"
-        value="Animation"
+        value="Comédie/Animation"
       />
       <SimpleSlider
-        title="Films exotique"
+        title="Films exotiques"
         propriete="original_language"
         value="en"
       />

@@ -29,7 +29,7 @@ function SimpleSlider({ title, propriete, value }) {
 
   return (
     <div>
-      <div className="Bloc1">
+      <div className="SimpleSliderBloc">
         <h2>{title}</h2>
         <Slider
           dots={false}

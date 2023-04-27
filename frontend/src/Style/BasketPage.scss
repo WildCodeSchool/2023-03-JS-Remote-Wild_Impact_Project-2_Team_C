@@ -25,12 +25,12 @@
     border-radius: 20px;
   }
 
-  .basket-total {
+  .basket-page-total {
     text-align: center;
     margin: 5% 5% 0 45%;
   }
 
-  .basket-button {
+  .basket-page-button {
     background-color: $cyan;
     margin: 5% 30%;
     border-radius: 25px;
@@ -56,7 +56,7 @@
     grid-column: 1;
   }
 
-  .recap-container {
+  .basket-container-recap {
     grid-row: 1;
     grid-column: 2/3;
     display: flex;
@@ -69,7 +69,7 @@
   }
 }
 
-.recommandation {
+.basket-page-recommandation {
   margin: 0;
   padding: 0;
   font-family: $font-family-text;
@@ -100,12 +100,12 @@
       margin: 2% 5%;
     }
 
-    .basket-total {
+    .basket-page-total {
       margin: 1% 5% 0 65%;
     }
   }
 
-  .orga {
+  .basket-page-orga {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

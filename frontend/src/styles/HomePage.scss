@@ -1,0 +1,32 @@
+@import "./Variables.scss";
+
+.Bloc1,
+.Bloc2,
+.Bloc3,
+.Bloc4,
+.Bloc5,
+.Bloc6 {
+  img {
+    padding-left: 5%;
+    width: 90%;
+  }
+}
+
+.Page1 {
+  h2 {
+    font-family: $font-family-text;
+    font-size: 4vw;
+    color: $font-color;
+    padding-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+  }
+
+  h4 {
+    font-family: $font-family-text;
+    font-size: 1rem;
+    color: $font-color;
+    padding-left: 5%;
+    margin-bottom: 0%;
+  }
+}

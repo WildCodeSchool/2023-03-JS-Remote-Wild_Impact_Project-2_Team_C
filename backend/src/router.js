@@ -13,10 +13,6 @@ database
     console.error(err);
   });
 
-// value.push(Horror)
-//      http:// localhost:3000/home => HOMEPAGE => FRONTEND
-// fetch("http://localhost5000/carrousel/?type=genres_ids&genre=Horror") => BACKEND
-
 router.get("/carrousel", (req, res) => {
   let url = "SELECT * FROM films";
   const value = [];

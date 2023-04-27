@@ -13,7 +13,6 @@ import Banner from "./components/Banner";
 import "./styles/Variables.scss";
 import "./styles/App.scss";
 
-
 function App() {
   return (
     <div className="App">
@@ -25,7 +24,7 @@ function App() {
       {/** US 3 Page */}
       <DescriptionPage />
       {/** US 4 Page */}
-        <BasketPage />
+      <BasketPage />
       {/* US 5 Page */}
       <ContactForm />
     </div>

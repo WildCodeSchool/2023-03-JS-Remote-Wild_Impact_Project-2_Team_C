@@ -1,17 +1,5 @@
 @import "./Variables.scss";
 
-.Bloc1,
-.Bloc2,
-.Bloc3,
-.Bloc4,
-.Bloc5,
-.Bloc6 {
-  img {
-    padding-left: 5%;
-    width: 90%;
-  }
-}
-
 .PageAccueil {
   h2 {
     font-family: $font-family-text;
@@ -28,5 +16,10 @@
     color: $font-color;
     padding-left: 5%;
     margin-bottom: 0%;
+  }
+  
+  img {
+    padding-left: 5%;
+    width: 90%;
   }
 }

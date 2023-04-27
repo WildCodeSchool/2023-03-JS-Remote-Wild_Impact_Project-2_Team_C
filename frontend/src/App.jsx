@@ -1,7 +1,7 @@
 // // US 1 import
 // import Page01 from "./pages/Page01";
 // // US 2 Import
-// import Page02 from "./pages/Page02";
+import SearchPage from "./pages/SearchPage";
 // // US 3 import
 // import Page03 from "./pages/Page03";
 // // US 4 import
@@ -20,7 +20,7 @@ function App() {
       {/** US 1 Page */}
       {/* <Page01 /> */}
       {/** US 2 Page */}
-      {/* <Page02 /> */}
+      <SearchPage />
       {/** US 3 Page */}
       {/* <Page03 /> */}
       {/** US 4 Page */}

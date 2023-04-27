@@ -9,7 +9,7 @@ import BasketPage from "./pages/BasketPage";
 // US 5 Import
 // import Page05 from "@pages/Page05";
 
-import "./App.scss";
+import "./style/App.scss";
 
 function App() {
   return (

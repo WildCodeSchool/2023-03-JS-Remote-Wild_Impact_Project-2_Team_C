@@ -5,7 +5,7 @@ import SimpleSlider from "../components/SimpleSlider";
 
 function HomePage() {
   return (
-    <div className="PageAcceuil">
+    <div className="PageAccueil">
       <Banner />
       <SimpleSlider
         title="Les films du moment"

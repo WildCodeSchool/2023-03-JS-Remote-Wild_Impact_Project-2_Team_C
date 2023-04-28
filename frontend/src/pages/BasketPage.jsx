@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Style/BasketPage.scss";
+import "../styles/BasketPage.scss";
 import BasketContainer from "../components/BasketContainer";
 import RecoPicture from "../components/RecoPicture";
 import films from "../data/films";

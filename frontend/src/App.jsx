@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // // US 1 import
 import HomePage from "./pages/HomePage";
 // // US 2 Import
@@ -10,24 +11,29 @@ import BasketPage from "./pages/BasketPage";
 // // US 5 Import
 import ContactForm from "./pages/ContactForm";
 import Banner from "./components/Banner";
+import Navbar from "./components/Navbar";
 import "./styles/Variables.scss";
 import "./styles/App.scss";
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Banner />
-      {/** US 1 Page */}
-      <HomePage />
-      {/** US 2 Page */}
-      <SearchPage />
-      {/** US 3 Page */}
-      <DescriptionPage />
-      {/** US 4 Page */}
-      <BasketPage />
+      <Navbar />
+      <Routes>
+        {/** US 1 Page */}
+        <Route path="/" element={<HomePage />} />
+        {/** US 2 Page */}
+        <Route path="/Search" element={<SearchPage />} />
+        {/** US 3 Page */}
+        <Route path="/Description" element={<DescriptionPage />} />
+        {/** US 4 Page */}
+        <Route path="/Basket" element={<BasketPage />} />
+      </Routes>
       {/* US 5 Page */}
+
       <ContactForm />
-    </div>
+    </Router>
   );
 }
 

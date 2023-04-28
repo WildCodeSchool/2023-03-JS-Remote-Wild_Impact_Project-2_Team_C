@@ -5,8 +5,8 @@ import React from "react";
 import SearchPage from "./pages/SearchPage";
 // // US 3 import
 import DescriptionPage from "./pages/DescriptionPage";
-// // US 4 import
-// import Page04 from "./pages/Page04";
+// US 4 import
+import BasketPage from "./pages/BasketPage";
 // // US 5 Import
 import ContactForm from "./pages/ContactForm";
 
@@ -25,7 +25,7 @@ function App() {
       {/** US 3 Page */}
       <DescriptionPage />
       {/** US 4 Page */}
-      {/* <Page04 /> */}
+      <BasketPage />
       {/* US 5 Page */}
       <ContactForm />
     </div>

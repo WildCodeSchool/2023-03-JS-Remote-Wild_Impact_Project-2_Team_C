@@ -8,7 +8,6 @@ import DescriptionPage from "./pages/DescriptionPage";
 // US 4 import
 import BasketPage from "./pages/BasketPage";
 // // US 5 Import
-// import Page05 from "./pages/Page05";
 import ContactForm from "./pages/ContactForm";
 import Banner from "./components/Banner";
 import "./styles/Variables.scss";
@@ -20,7 +19,6 @@ function App() {
       <Banner />
       {/** US 1 Page */}
       <HomePage />
-      {/* <Page01 /> */}
       {/** US 2 Page */}
       <SearchPage />
       {/** US 3 Page */}

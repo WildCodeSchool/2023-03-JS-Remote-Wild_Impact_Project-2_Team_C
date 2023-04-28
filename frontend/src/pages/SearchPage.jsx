@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Banner from "../components/Banner";
 import "../styles/SearchPage.scss";
 import films from "../data/films";
 import FilmCard from "../components/FilmCard";
@@ -27,8 +26,7 @@ function SearchPage() {
 
   return (
     <div>
-      <Banner />
-      <div className="search">
+      <div className="search-page-input">
         <input
           type="text"
           name="searchBar"
@@ -38,7 +36,7 @@ function SearchPage() {
           onChange={(event) => setSearch(event.target.value)}
         />
       </div>
-      <div className="filtre">
+      <div className="search-page-filter">
         <select
           className="categoryFilter"
           id="categoryFilter"
@@ -57,9 +55,9 @@ function SearchPage() {
           value={date}
           onChange={(event) => setDate(event.target.value)}
         >
-          <option value="All">-- Date --</option>
-          <option value="1">Croissant</option>
-          <option value="2">Décroissant</option>
+          <option value="All">-- Release Date --</option>
+          <option value="Ascending">Ascending</option>
+          <option value="Descending">Descending</option>
         </select>
 
         <select
@@ -69,8 +67,8 @@ function SearchPage() {
           onChange={(event) => setPrice(event.target.value)}
         >
           <option value="All">-- Price --</option>
-          <option value="1">Croissant</option>
-          <option value="2">Décroissant</option>
+          <option value="Ascending">Ascending</option>
+          <option value="Descending">Descending</option>
         </select>
       </div>
       <div>
@@ -82,12 +80,12 @@ function SearchPage() {
             );
           })
           .sort((film1, film2) => {
-            if (date === "1") {
+            if (date === "Ascending") {
               return (
                 new Date(film1.release_date) - new Date(film2.release_date)
               );
             }
-            if (date === "2") {
+            if (date === "Descending") {
               return (
                 new Date(film2.release_date) - new Date(film1.release_date)
               );
@@ -95,10 +93,10 @@ function SearchPage() {
             return 0;
           })
           .sort((film1, film2) => {
-            if (price === "1") {
+            if (price === "Ascending") {
               return film1.price - film2.price;
             }
-            if (price === "2") {
+            if (price === "Descending") {
               return film2.price - film1.price;
             }
             return 0;

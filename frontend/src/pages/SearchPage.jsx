@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/SearchPage.scss";
 import films from "../data/films";
-import FilmCard from "../components/FilmCard";
+import FilmSearchCard from "../components/FilmSearchCard";
 
 const genres = [
   "Action",
@@ -102,7 +102,7 @@ function SearchPage() {
             return 0;
           })
           .map((film) => (
-            <FilmCard film={film} key={film.id} />
+            <FilmSearchCard film={film} key={film.id} />
           ))}
       </div>
     </div>

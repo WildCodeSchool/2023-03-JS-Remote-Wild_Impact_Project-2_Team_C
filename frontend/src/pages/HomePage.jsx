@@ -1,12 +1,10 @@
 import React from "react";
-import Banner from "../components/Banner";
 import "../styles/HomePage.scss";
 import SimpleSlider from "../components/SimpleSlider";
 
 function HomePage() {
   return (
     <div className="PageAccueil">
-      <Banner />
       <SimpleSlider
         title="Les films du moment"
         propriete="popularity"

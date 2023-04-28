@@ -1,6 +1,6 @@
 @import "./Variables.scss";
 
-.search {
+.search-page-input {
     margin-top: 5%;
     display: flex;
     justify-content: center;
@@ -13,7 +13,7 @@
     font-size: 1rem;
 }
 
-.filtre {
+.search-page-filter {
     width: 90%;
     margin: 5%;
     display: flex;
@@ -38,13 +38,13 @@
     font-size: 1.3rem;
 }
 
-.card-header {
+.search-card-header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.card-img {
+.search-card-img {
     height: 80%;
     width: 60%;
 }
@@ -71,7 +71,7 @@ h2 {
     font-size: 2.3rem;
 }
 
-.card-body {
+.search-card-body {
     display: flex;
     justify-content: center;
     gap: 10%;

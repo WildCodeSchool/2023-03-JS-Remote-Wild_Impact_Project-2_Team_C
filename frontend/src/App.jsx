@@ -1,25 +1,39 @@
-import Home from "./pages/Home";
-// US 1 import
-
-// US 2 Import
-
-// US 3 import
-
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// // US 1 import
+import HomePage from "./pages/HomePage";
+// // US 2 Import
+import SearchPage from "./pages/SearchPage";
+// // US 3 import
+import DescriptionPage from "./pages/DescriptionPage";
 // US 4 import
-
-
-import "./App.css";
+import BasketPage from "./pages/BasketPage";
+// // US 5 Import
+import ContactForm from "./pages/ContactForm";
+import Banner from "./components/Banner";
+import Navbar from "./components/Navbar";
+import "./styles/Variables.scss";
+import "./styles/App.scss";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-      {/** US 1 Page */}
-      {/** US 2 Page */}
-      {/** US 3 Page */}
-      {/** US 4 Page */}
-      <p>coucou</p>
-    </div>
+    <Router>
+      <Banner />
+      <Navbar />
+      <Routes>
+        {/** US 1 Page */}
+        <Route path="/" element={<HomePage />} />
+        {/** US 2 Page */}
+        <Route path="/Search" element={<SearchPage />} />
+        {/** US 3 Page */}
+        <Route path="/Description" element={<DescriptionPage />} />
+        {/** US 4 Page */}
+        <Route path="/Basket" element={<BasketPage />} />
+      </Routes>
+      {/* US 5 Page */}
+
+      <ContactForm />
+    </Router>
   );
 }
 

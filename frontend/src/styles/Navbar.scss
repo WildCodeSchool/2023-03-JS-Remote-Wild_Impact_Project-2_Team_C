@@ -1,0 +1,21 @@
+@import "./Variables.scss";
+
+.Navbar {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+
+  img {
+    height: 100%;
+    width: 40%;
+  }
+
+  button {
+    border: none;
+    background-color: $lightgrey;
+
+    &:hover {
+      filter: invert(1);
+    }
+  }
+}

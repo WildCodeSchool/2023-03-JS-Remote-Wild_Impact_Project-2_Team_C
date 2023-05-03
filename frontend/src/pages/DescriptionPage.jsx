@@ -7,11 +7,12 @@ import "../styles/DescriptionPage.scss";
 function DescriptionPage({ getMovieId, setGetMovieId }) {
   return (
     <div>
-      <button type="button" onClick={() => setGetMovieId(getMovieId + 1)}>
-        {getMovieId}
-      </button>
       {films.map((film) => (
-        <FilmDescCard film={film} />
+        <FilmDescCard
+          film={film}
+          getMovieId={getMovieId}
+          setGetMovieId={setGetMovieId}
+        />
       ))}
     </div>
   );

@@ -1,8 +1,7 @@
 import React from "react";
 import AddToCartBtn from "./AddToCartBtn";
-import BackBtn from "./BackBtn";
 
-function FilmDescCard({ film, setMoviesId, setPriceBasket }) {
+function FilmDescCard({ film, setMoviesId, setPriceBasket  }) {
   return (
     <div className="descriptionCard">
       <div className="descFilmImage">
@@ -24,8 +23,6 @@ function FilmDescCard({ film, setMoviesId, setPriceBasket }) {
           setPriceBasket={setPriceBasket}
         />
         <p className="descFilmOverview">{film.overview}</p>
-        <BackBtn />
-      </div>
     </div>
   );
 }

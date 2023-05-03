@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import FilmSearchCard from "../components/FilmSearchCard";
 import "../styles/SearchPage.scss";
 
 function SearchPage() {
@@ -15,7 +15,7 @@ function SearchPage() {
   return (
     <div>
       {movies.map((movie) => (
-        <h3 key={movie.id}>{movie.title}</h3>
+        <FilmSearchCard movie={movie} key={movie.id} />
       ))}
     </div>
   );

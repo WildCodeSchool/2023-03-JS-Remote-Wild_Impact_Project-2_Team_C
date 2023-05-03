@@ -4,9 +4,8 @@ import BasketContainer from "../components/BasketContainer";
 import RecoPicture from "../components/RecoPicture";
 import films from "../data/films";
 
-function BasketPage({ getMovieId }) {
+function BasketPage() {
   const [buy, setBuy] = useState("Buy");
-  console.info(`${getMovieId} est dans la basketPage`);
   return (
     <div>
       <div className="basket-page">
@@ -16,11 +15,11 @@ function BasketPage({ getMovieId }) {
             <BasketContainer film={film} />
           ))}
         </div>
-        <h2 className="basket-page-total">Total : X €</h2>
+        <h2 className="basket-page-total">Total : €</h2>
         <button
           type="button"
           className="basket-page-button"
-          onClick={() => setBuy("Paid confirm, Thank you !")}
+          onClick={() => setBuy("Payment confirmed, Thank you !")}
         >
           {buy}{" "}
         </button>

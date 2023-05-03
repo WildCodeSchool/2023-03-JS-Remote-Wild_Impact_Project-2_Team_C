@@ -1,7 +1,7 @@
 import React from "react";
 import AddToCartBtn from "./AddToCartBtn";
 
-function FilmDescCard({ film }) {
+function FilmDescCard({ film, setMoviesId, setPriceBasket  }) {
   return (
     <div className="descriptionCard">
       <div className="descFilmImage">
@@ -17,9 +17,12 @@ function FilmDescCard({ film }) {
           Viewers' votes: {film.vote_average}/10
         </p>
         <p className="descPrice">Price: {film.price}€</p>
-        <AddToCartBtn />
+        <AddToCartBtn
+          film={film}
+          setMoviesId={setMoviesId}
+          setPriceBasket={setPriceBasket}
+        />
         <p className="descFilmOverview">{film.overview}</p>
-      </div>
     </div>
   );
 }

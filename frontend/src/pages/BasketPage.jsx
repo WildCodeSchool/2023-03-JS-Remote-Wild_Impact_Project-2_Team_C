@@ -15,11 +15,11 @@ function BasketPage() {
             <BasketContainer film={film} />
           ))}
         </div>
-        <h2 className="basket-page-total">Total : X €</h2>
+        <h2 className="basket-page-total">Total : €</h2>
         <button
           type="button"
           className="basket-page-button"
-          onClick={() => setBuy("Paid confirm, Thank you !")}
+          onClick={() => setBuy("Payment confirmed, Thank you !")}
         >
           {buy}{" "}
         </button>

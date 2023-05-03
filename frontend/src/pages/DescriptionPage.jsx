@@ -4,7 +4,7 @@ import FilmDescCard from "../components/FilmDescCard";
 
 import "../styles/DescriptionPage.scss";
 
-function DescriptionPage() {
+function DescriptionPage({ setMoviesId, setPriceBasket }) {
   const { id } = useParams();
   const [oneFilm, setOneFilm] = useState([]);
   useEffect(() => {
@@ -13,8 +13,13 @@ function DescriptionPage() {
       .then((data) => setOneFilm(data))
       .catch((err) => console.error(err));
   }, []);
-
-  return <FilmDescCard film={oneFilm} />;
+  return (
+    <FilmDescCard
+      film={oneFilm}
+      setMoviesId={setMoviesId}
+      setPriceBasket={setPriceBasket}
+    />
+  );
 }
 
 export default DescriptionPage;

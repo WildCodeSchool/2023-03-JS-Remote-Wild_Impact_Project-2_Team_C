@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 
-function AddToCartBtn() {
+function AddToCartBtn({ setMoviesId, film, setPriceBasket }) {
   const [addToCartMessage, setAddToCartMessage] = useState(true);
-  function handleClick() {
+  const handleClick = () => {
     setAddToCartMessage(!addToCartMessage);
-  }
+    setMoviesId((moviesId) => [...moviesId, film.id]);
+    setPriceBasket((price) => price + film.price);
+  };
+
   return (
     <div>
       <div className="descButtonDiv">

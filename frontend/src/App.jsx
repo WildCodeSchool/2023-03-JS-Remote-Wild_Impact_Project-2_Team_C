@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // // US 1 import
 import HomePage from "./pages/HomePage";
@@ -16,6 +16,11 @@ import "./styles/Variables.scss";
 import "./styles/App.scss";
 
 function App() {
+  const [getMovieId, setGetMovieId] = useState(0);
+  const movieCount = () => {
+    setGetMovieId(getMovieId + 1);
+  };
+  console.info(movieCount);
   return (
     <Router>
       <Banner />

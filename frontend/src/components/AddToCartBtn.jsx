@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 
-function AddToCartBtn({ getMovieId, setGetMovieId, film }) {
+function AddToCartBtn({ setGetMovieId, film }) {
   const [addToCartMessage, setAddToCartMessage] = useState(true);
-  function handleClick() {
+  const handleClick = () => {
     setAddToCartMessage(!addToCartMessage);
-  }
-  const handleClickMovie = () => {
-    setGetMovieId(getMovieId + 1);
-    console.info(film.id);
+    setGetMovieId((getMovieId) => [...getMovieId, film.id]);
   };
+
   return (
     <div>
-      <button type="button" onClick={handleClickMovie}>
-        {getMovieId}
-      </button>
       <div className="descButtonDiv">
         {addToCartMessage ? (
           <button className="descAddButton" type="button" onClick={handleClick}>

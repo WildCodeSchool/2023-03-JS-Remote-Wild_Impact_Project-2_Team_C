@@ -14,11 +14,11 @@ function DescriptionPage({ setMoviesId, setPriceBasket }) {
       .catch((err) => console.error(err));
   }, []);
   return (
-        <FilmDescCard
-          film={oneFilmfilm}
-          setMoviesId={setMoviesId}
-          setPriceBasket={setPriceBasket}
-        />
+    <FilmDescCard
+      film={oneFilm}
+      setMoviesId={setMoviesId}
+      setPriceBasket={setPriceBasket}
+    />
   );
 }
 

@@ -15,10 +15,10 @@ function DescriptionPage({ setMoviesId, setPriceBasket }) {
   }, []);
 
   return (
-    <FilmDescCard 
-      film={oneFilm} 
-      setMoviesId={setMoviesId}
-      setPriceBasket={setPriceBasket}
+   <FilmDescCard 
+     film={oneFilm} 
+     setMoviesId={setMoviesId}
+     setPriceBasket={setPriceBasket}
     />
   );
 }

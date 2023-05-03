@@ -16,7 +16,8 @@ import "./styles/Variables.scss";
 import "./styles/App.scss";
 
 function App() {
-  const [getMovieId, setGetMovieId] = useState([]);
+  const [moviesId, setMoviesId] = useState([]);
+  const [priceBasket, setPriceBasket] = useState(0);
   return (
     <Router>
       <Banner />
@@ -29,12 +30,17 @@ function App() {
         {/** US 3 Page */}
         <Route
           path="/Description"
-          element={<DescriptionPage setGetMovieId={setGetMovieId} />}
+          element={
+            <DescriptionPage
+              setMoviesId={setMoviesId}
+              setPriceBasket={setPriceBasket}
+            />
+          }
         />
         {/** US 4 Page */}
         <Route
           path="/Basket"
-          element={<BasketPage getMovieId={getMovieId} />}
+          element={<BasketPage moviesId={moviesId} priceBasket={priceBasket} />}
         />
       </Routes>
       {/* US 5 Page */}

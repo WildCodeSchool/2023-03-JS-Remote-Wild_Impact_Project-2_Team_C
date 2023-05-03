@@ -17,8 +17,8 @@ function FilmSearchCard({ movie }) {
       <h2 className="search-card-title">{movie.title}</h2>
 
       <div className="search-card-body">
-        <p className="search-card-Category">{movie.genre_ids}</p>
         <p className="search-card-Date">{movie.release_date}</p>
+        <p className="search-card-Category">{movie.genre_ids}</p>
         <p className="search-card-Price">{movie.price}</p>
       </div>
     </div>

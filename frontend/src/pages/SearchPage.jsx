@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import FilmSearchCard from "../components/FilmSearchCard";
+import SearchPageFilter from "../components/SearchPageFilter";
 import "../styles/SearchPage.scss";
 
 function SearchPage() {
@@ -14,6 +15,7 @@ function SearchPage() {
 
   return (
     <div>
+      <SearchPageFilter />
       {movies.map((movie) => (
         <FilmSearchCard movie={movie} key={movie.id} />
       ))}

@@ -4,8 +4,9 @@ import BasketContainer from "../components/BasketContainer";
 import RecoPicture from "../components/RecoPicture";
 import films from "../data/films";
 
-function BasketPage() {
+function BasketPage({ getMovieId }) {
   const [buy, setBuy] = useState("Buy");
+  console.info(`${getMovieId} est dans la basketPage`);
   return (
     <div>
       <div className="basket-page">

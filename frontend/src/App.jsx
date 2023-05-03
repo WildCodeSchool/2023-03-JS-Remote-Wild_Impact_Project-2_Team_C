@@ -17,7 +17,6 @@ import "./styles/App.scss";
 
 function App() {
   const [getMovieId, setGetMovieId] = useState([]);
-  console.info(getMovieId);
   return (
     <Router>
       <Banner />
@@ -33,7 +32,10 @@ function App() {
           element={<DescriptionPage setGetMovieId={setGetMovieId} />}
         />
         {/** US 4 Page */}
-        <Route path="/Basket" element={<BasketPage />} />
+        <Route
+          path="/Basket"
+          element={<BasketPage getMovieId={getMovieId} />}
+        />
       </Routes>
       {/* US 5 Page */}
 

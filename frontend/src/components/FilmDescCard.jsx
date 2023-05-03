@@ -18,7 +18,11 @@ function FilmDescCard({ film, getMovieId, setGetMovieId }) {
           Viewers' votes: {film.vote_average}/10
         </p>
         <p className="descPrice">Price: {film.price}€</p>
-        <AddToCartBtn getMovieId={getMovieId} setGetMovieId={setGetMovieId} />
+        <AddToCartBtn
+          film={film}
+          getMovieId={getMovieId}
+          setGetMovieId={setGetMovieId}
+        />
         <p className="descFilmOverview">{film.overview}</p>
         <BackBtn />
       </div>

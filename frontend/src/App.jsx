@@ -26,7 +26,7 @@ function App() {
         {/** US 2 Page */}
         <Route path="/Search" element={<SearchPage />} />
         {/** US 3 Page */}
-        <Route path="/Description" element={<DescriptionPage />} />
+        <Route path="/Description/:id" element={<DescriptionPage />} />
         {/** US 4 Page */}
         <Route path="/Basket" element={<BasketPage />} />
       </Routes>

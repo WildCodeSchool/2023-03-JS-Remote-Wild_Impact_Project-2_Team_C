@@ -4,9 +4,12 @@ import films from "../data/films";
 
 import "../styles/DescriptionPage.scss";
 
-function DescriptionPage() {
+function DescriptionPage({ getMovieId, setGetMovieId }) {
   return (
     <div>
+      <button type="button" onClick={() => setGetMovieId(getMovieId + 1)}>
+        {getMovieId}
+      </button>
       {films.map((film) => (
         <FilmDescCard film={film} />
       ))}

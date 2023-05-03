@@ -8,7 +8,7 @@ function DescriptionPage() {
   const { id } = useParams();
   const [oneFilm, setOneFilm] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/films/${id}`)
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/films/${id}`)
       .then((res) => res.json())
       .then((data) => setOneFilm(data))
       .catch((err) => console.error(err));

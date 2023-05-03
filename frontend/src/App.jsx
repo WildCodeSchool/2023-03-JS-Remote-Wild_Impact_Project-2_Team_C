@@ -29,7 +29,7 @@ function App() {
         <Route path="/Search" element={<SearchPage />} />
         {/** US 3 Page */}
         <Route
-          path="/Description"
+          path="/Description/:id"
           element={
             <DescriptionPage
               setMoviesId={setMoviesId}

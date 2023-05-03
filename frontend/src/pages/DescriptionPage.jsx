@@ -4,15 +4,11 @@ import films from "../data/films";
 
 import "../styles/DescriptionPage.scss";
 
-function DescriptionPage({ getMovieId, setGetMovieId }) {
+function DescriptionPage({ setGetMovieId }) {
   return (
     <div>
       {films.map((film) => (
-        <FilmDescCard
-          film={film}
-          getMovieId={getMovieId}
-          setGetMovieId={setGetMovieId}
-        />
+        <FilmDescCard film={film} setGetMovieId={setGetMovieId} />
       ))}
     </div>
   );

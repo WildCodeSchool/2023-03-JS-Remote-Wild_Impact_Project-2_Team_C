@@ -2,7 +2,7 @@ import React from "react";
 import AddToCartBtn from "./AddToCartBtn";
 import BackBtn from "./BackBtn";
 
-function FilmDescCard({ film, getMovieId, setGetMovieId }) {
+function FilmDescCard({ film, setGetMovieId }) {
   return (
     <div className="descriptionCard">
       <div className="descFilmImage">
@@ -18,11 +18,7 @@ function FilmDescCard({ film, getMovieId, setGetMovieId }) {
           Viewers' votes: {film.vote_average}/10
         </p>
         <p className="descPrice">Price: {film.price}€</p>
-        <AddToCartBtn
-          film={film}
-          getMovieId={getMovieId}
-          setGetMovieId={setGetMovieId}
-        />
+        <AddToCartBtn film={film} setGetMovieId={setGetMovieId} />
         <p className="descFilmOverview">{film.overview}</p>
         <BackBtn />
       </div>

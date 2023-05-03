@@ -15,9 +15,9 @@ function DescriptionPage({ setMoviesId, setPriceBasket }) {
   }, []);
 
   return <FilmDescCard 
-  film={oneFilm} 
-  setMoviesId={setMoviesId}
-  setPriceBasket={setPriceBasket}
+      film={oneFilm} 
+      setMoviesId={setMoviesId}
+      setPriceBasket={setPriceBasket}
   />;
 }
 

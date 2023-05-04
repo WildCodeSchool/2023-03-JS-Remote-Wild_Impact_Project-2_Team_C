@@ -19,12 +19,11 @@ function ContactForm() {
       .then(() => {
         // eslint-disable-next-line no-alert
         alert("your message has been sent");
-      })
-      .then(() => {
         setName("");
         setEmail("");
         setMessage("");
       })
+
       .catch((err) => console.error(err));
   };
 

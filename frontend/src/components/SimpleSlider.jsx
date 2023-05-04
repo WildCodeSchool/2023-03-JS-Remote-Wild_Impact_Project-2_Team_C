@@ -1,7 +1,7 @@
 import Slider from "react-slick";
-
 import "./slick.css";
 import "./slick-theme.css";
+import { Link } from "react-router-dom";
 import films from "../data/films";
 import ImageVote from "./ImageVote";
 
@@ -50,7 +50,11 @@ function SimpleSlider({ title, propriete, value }) {
               return film[propriete] >= value;
             })
             .map((film) => {
-              return <ImageVote film={film} />;
+              return (
+                <Link to={`/Description/${film.id}`}>
+                  <ImageVote film={film} />
+                </Link>
+              );
             })}
         </Slider>
       </div>

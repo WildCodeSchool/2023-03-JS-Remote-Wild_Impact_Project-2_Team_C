@@ -16,12 +16,10 @@ database
 router.get("/carrousel", (req, res) => {
   let url = "SELECT * FROM films";
   const value = [];
-
   if (req.query.type === "genre_ids") {
-    url += " WHERE genre_ids IN ( ? )LIMIT 8";
-    value.push(req.query.genre.split(","));
+    url += " WHERE genre_ids = ? LIMIT 8";
+    value.push(req.query.genre);
   }
-
   if (req.query.type === "original_language") {
     url += " WHERE original_language != 'en' LIMIT 8";
   }
@@ -48,9 +46,10 @@ router.get("/films", (req, res) => {
     url += " WHERE genre_ids = ? ";
     value.push(req.query.genre);
   }
+
   // Mon input RECHERCHE
   if (req.query.type === "title") {
-    url += " WHERE title = ? ";
+    url += " WHERE title LIKE ? ";
     value.push(req.query.genre);
   }
   // Mon filtre PRICE ET DATE =>
@@ -84,6 +83,18 @@ router.get("/films/:id", (req, res) => {
       } else {
         res.status(404).send("Not Found");
       }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send("Error retrieving data from database");
+    });
+});
+
+router.get("/genres", (req, res) => {
+  database
+    .query("SELECT DISTINCT genre_ids FROM films")
+    .then(([genre]) => {
+      res.status(200).json(genre);
     })
     .catch((err) => {
       console.error(err);

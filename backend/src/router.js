@@ -39,7 +39,7 @@ router.get("/carrousel", (req, res) => {
       res.status(500).send("Error retrieving data from database");
     });
 });
-
+//
 router.get("/films", (req, res) => {
   let url = "SELECT * FROM films";
   const value = [];
@@ -55,7 +55,7 @@ router.get("/films", (req, res) => {
   }
   // Mon filtre PRICE ET DATE =>
   if (req.query.type === "price") {
-    url += " WHERE price >= ? ";
+    url += " WHERE price = ? ";
     value.push(req.query.genre);
   }
   if (req.query.type === "release_date") {
@@ -93,9 +93,21 @@ router.get("/films/:id", (req, res) => {
 
 router.get("/genres", (req, res) => {
   database
-    .query("SELECT DISTINCT genre_ids FROM films")
+    .query("SELECT DISTINCT genre_ids AS label FROM films")
     .then(([genre]) => {
       res.status(200).json(genre);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send("Error retrieving data from database");
+    });
+});
+
+router.get("/prices", (req, res) => {
+  database
+    .query("SELECT DISTINCT price AS label FROM films")
+    .then(([price]) => {
+      res.status(200).json(price);
     })
     .catch((err) => {
       console.error(err);

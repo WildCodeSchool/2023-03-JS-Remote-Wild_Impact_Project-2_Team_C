@@ -55,7 +55,11 @@ function SimpleSlider({ title, propriete, value }) {
           responsive={responsive}
         >
           {films.map((film) => {
-            return <ImageVote film={film} />;
+            return (
+              <Link to={`/Description/${film.id}`}>
+                <ImageVote film={film} />
+              </Link>
+            );
           })}
         </Slider>
       </div>

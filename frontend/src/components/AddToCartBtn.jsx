@@ -4,7 +4,7 @@ function AddToCartBtn({ setMoviesId, film, setPriceBasket }) {
   const [addToCartMessage, setAddToCartMessage] = useState(true);
   const handleClick = () => {
     setAddToCartMessage(!addToCartMessage);
-    setMoviesId((moviesId) => [...moviesId, film.id]);
+    setMoviesId((moviesId) => [...moviesId, film]);
     setPriceBasket((price) => price + film.price);
   };
 

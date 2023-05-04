@@ -46,6 +46,7 @@ router.get("/films", (req, res) => {
     url += " WHERE genre_ids = ? ";
     value.push(req.query.genre);
   }
+
   // Mon input RECHERCHE
   if (req.query.type === "title") {
     url += " WHERE title = ? ";

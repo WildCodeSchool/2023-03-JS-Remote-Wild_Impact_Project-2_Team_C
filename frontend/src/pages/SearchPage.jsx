@@ -6,39 +6,79 @@ import "../styles/SearchPage.scss";
 
 function SearchPage() {
   const [films, setfilms] = useState([]);
-  const [filter, setFilter] = useState({
+  const [category, setCategory] = useState({
     type: "",
     genre: "",
   });
 
   useEffect(() => {
-    if (filter.genre === "") {
+    if (category.genre === "") {
       fetch(`${import.meta.env.VITE_BACKEND_URL}/films`)
         .then((res) => res.json())
         .then((data) => setfilms(data))
         .catch((err) => console.error(err));
     } else {
       fetch(
-        `${import.meta.env.VITE_BACKEND_URL}/films?type=${filter.type}&genre=${
-          filter.genre
+        `${import.meta.env.VITE_BACKEND_URL}/films?type=${
+          category.type
+        }&genre=${category.genre}`
+      )
+        .then((res) => res.json())
+        .then((data) => setfilms(data))
+        .catch((err) => console.error(err));
+    }
+  }, [category]);
+
+  const [price, setPrice] = useState({
+    type: "",
+    genre: "",
+  });
+
+  useEffect(() => {
+    if (price.genre === "") {
+      fetch(`${import.meta.env.VITE_BACKEND_URL}/films`)
+        .then((res) => res.json())
+        .then((data) => setfilms(data))
+        .catch((err) => console.error(err));
+    } else {
+      fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/films?type=${price.type}&genre=${
+          price.genre
         }`
       )
         .then((res) => res.json())
         .then((data) => setfilms(data))
         .catch((err) => console.error(err));
     }
-  }, [filter]);
+  }, []);
 
   return (
     <div>
-      <Filter filter={filter} handleFilter={setFilter} />
-      {films.map((film) => {
-        return (
-          <Link key={film.id} to={`/Description/${film.id}`}>
-            <FilmSearchCard film={film} key={film.id} />
-          </Link>
-        );
-      })}
+      <Filter
+        filter={category}
+        handleFilter={setCategory}
+        name="genres"
+        value="genre_ids"
+      />
+      <Filter
+        filter={price}
+        handleFilter={setPrice}
+        name="prices"
+        value="price"
+      />
+      {films
+        .filter(
+          (film) =>
+            (film.genre_ids === category.genre || !category.genre) &&
+            (film.price === +price.genre || !price.genre)
+        )
+        .map((film) => {
+          return (
+            <Link key={film.id} to={`/Description/${film.id}`}>
+              <FilmSearchCard film={film} key={film.id} />
+            </Link>
+          );
+        })}
     </div>
   );
 }

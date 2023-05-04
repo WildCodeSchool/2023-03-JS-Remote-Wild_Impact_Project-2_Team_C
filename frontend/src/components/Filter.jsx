@@ -1,28 +1,27 @@
 import React, { useEffect, useState } from "react";
 
-function Filter({ handleFilter, filter }) {
-  const [genres, setGenres] = useState([]);
+function Filter({ handleFilter, filter, name, value }) {
+  const [filtersValue, setFiltersValue] = useState([]);
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_BACKEND_URL}/genres`)
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/${name}`)
       .then((res) => res.json())
-      .then((data) => setGenres(data))
+      .then((data) => setFiltersValue(data))
       .catch((err) => console.error(err));
   }, []);
-
   return (
     <div>
       <select
-        name="genres"
-        id="genres"
+        name={value}
+        id={value}
         onChange={(event) =>
-          handleFilter({ type: "genre_ids", genre: event.target.value })
+          handleFilter({ type: value, genre: event.target.value })
         }
         value={filter.genre}
       >
-        <option value="">All</option>
-        {genres.map((genre) => (
-          <option key={genre.genre_ids} value={genre.genre_ids}>
-            {genre.genre_ids}
+        <option value="">All {name} </option>
+        {filtersValue.map((filterValue) => (
+          <option key={filterValue.label} value={filterValue.label}>
+            {filterValue.label}
           </option>
         ))}
       </select>

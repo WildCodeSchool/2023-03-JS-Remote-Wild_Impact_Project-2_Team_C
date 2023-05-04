@@ -34,7 +34,7 @@ function SearchPage() {
       <Filter filter={filter} handleFilter={setFilter} />
       {films.map((film) => {
         return (
-          <Link to={`/Description/${film.id}`}>
+          <Link key={film.id} to={`/Description/${film.id}`}>
             <FilmSearchCard film={film} key={film.id} />
           </Link>
         );

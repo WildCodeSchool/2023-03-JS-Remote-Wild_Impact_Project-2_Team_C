@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function SearchPageFilter({ handleFilter, filter }) {
+function Filter({ handleFilter, filter }) {
   const [genres, setGenres] = useState([]);
   useEffect(() => {
     fetch(`${import.meta.env.VITE_BACKEND_URL}/genres`)
@@ -21,11 +21,13 @@ function SearchPageFilter({ handleFilter, filter }) {
       >
         <option value="">All</option>
         {genres.map((genre) => (
-          <option value={genre.genre_ids}>{genre.genre_ids}</option>
+          <option key={genre.genre_ids} value={genre.genre_ids}>
+            {genre.genre_ids}
+          </option>
         ))}
       </select>
     </div>
   );
 }
 
-export default SearchPageFilter;
+export default Filter;

@@ -1,17 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function FilmSearchCard({ film }) {
   return (
     <div className="search-card">
       <div className="search-card-header">
-        <Link to={`/Decription/${film.id}`}>
-          <img
-            className="search-card-img"
-            src={film.poster_path}
-            alt="Film Poster"
-          />
-        </Link>
+        <img
+          className="search-card-img"
+          src={film.poster_path}
+          alt="Film Poster"
+        />
         <p className="search-card-Average" id="average">
           {film.vote_average}
         </p>

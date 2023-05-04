@@ -39,7 +39,7 @@ router.get("/carrousel", (req, res) => {
       res.status(500).send("Error retrieving data from database");
     });
 });
-//
+
 router.get("/films", (req, res) => {
   let url = "SELECT * FROM films";
   const value = [];

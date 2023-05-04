@@ -50,7 +50,7 @@ router.get("/films", (req, res) => {
   // Mon input RECHERCHE
   if (req.query.type === "title") {
     url += " WHERE title LIKE ? ";
-    value.push(req.query.genre);
+    value.push(`%${req.query.genre}%`);
   }
   // Mon filtre PRICE ET DATE =>
   if (req.query.type === "price") {

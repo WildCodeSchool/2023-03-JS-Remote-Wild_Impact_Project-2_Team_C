@@ -12,14 +12,21 @@ function SearchPage() {
   });
 
   useEffect(() => {
-    fetch(
-      `${import.meta.env.VITE_BACKEND_URL}/films?type=${filter.type}&genre=${
-        filter.genre
-      }`
-    )
-      .then((res) => res.json())
-      .then((data) => setfilms(data))
-      .catch((err) => console.error(err));
+    if (filter.genre === "") {
+      fetch(`${import.meta.env.VITE_BACKEND_URL}/films`)
+        .then((res) => res.json())
+        .then((data) => setfilms(data))
+        .catch((err) => console.error(err));
+    } else {
+      fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/films?type=${filter.type}&genre=${
+          filter.genre
+        }`
+      )
+        .then((res) => res.json())
+        .then((data) => setfilms(data))
+        .catch((err) => console.error(err));
+    }
   }, [filter]);
 
   return (

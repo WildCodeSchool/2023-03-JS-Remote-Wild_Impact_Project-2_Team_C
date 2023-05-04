@@ -1,7 +1,10 @@
-import Slider from "react-slick";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Slider from "react-slick";
+
 import "./slick.css";
 import "./slick-theme.css";
+
 import ImageVote from "./ImageVote";
 
 function SimpleSlider({ title, propriete, value }) {

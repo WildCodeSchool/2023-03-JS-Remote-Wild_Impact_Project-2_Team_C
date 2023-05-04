@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import FilmSearchCard from "../components/FilmSearchCard";
-import SearchPageFilter from "../components/Filter";
+import Filter from "../components/Filter";
 import "../styles/SearchPage.scss";
 
 function SearchPage() {
@@ -24,7 +24,7 @@ function SearchPage() {
 
   return (
     <div>
-      <SearchPageFilter filter={filter} handleFilter={setFilter} />
+      <Filter filter={filter} handleFilter={setFilter} />
       {films.map((film) => {
         return (
           <Link to={`/Description/${film.id}`}>

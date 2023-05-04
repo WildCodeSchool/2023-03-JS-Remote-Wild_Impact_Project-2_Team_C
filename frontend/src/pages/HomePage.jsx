@@ -23,7 +23,7 @@ function HomePage() {
       <SimpleSlider
         title="Comédie/Animation"
         propriete="genre_ids"
-        value="Comédie/Animation"
+        value="Comédie,Animation"
       />
       <SimpleSlider
         title="Films exotiques"

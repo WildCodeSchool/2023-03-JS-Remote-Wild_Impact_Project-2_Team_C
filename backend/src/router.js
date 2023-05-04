@@ -16,10 +16,12 @@ database
 router.get("/carrousel", (req, res) => {
   let url = "SELECT * FROM films";
   const value = [];
+
   if (req.query.type === "genre_ids") {
-    url += " WHERE genre_ids = ? LIMIT 8";
-    value.push(req.query.genre);
+    url += " WHERE genre_ids IN ( ? )LIMIT 8";
+    value.push(req.query.genre.split(","));
   }
+
   if (req.query.type === "original_language") {
     url += " WHERE original_language != 'en' LIMIT 8";
   }

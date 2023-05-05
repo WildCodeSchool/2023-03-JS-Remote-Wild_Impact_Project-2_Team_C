@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // // US 1 import
 import HomePage from "./pages/HomePage";
@@ -16,6 +16,8 @@ import "./styles/Variables.scss";
 import "./styles/App.scss";
 
 function App() {
+  const [moviesId, setMoviesId] = useState([]);
+  const [priceBasket, setPriceBasket] = useState(0);
   return (
     <Router>
       <Banner />
@@ -26,9 +28,20 @@ function App() {
         {/** US 2 Page */}
         <Route path="/Search" element={<SearchPage />} />
         {/** US 3 Page */}
-        <Route path="/Description" element={<DescriptionPage />} />
+        <Route
+          path="/Description/:id"
+          element={
+            <DescriptionPage
+              setMoviesId={setMoviesId}
+              setPriceBasket={setPriceBasket}
+            />
+          }
+        />
         {/** US 4 Page */}
-        <Route path="/Basket" element={<BasketPage />} />
+        <Route
+          path="/Basket"
+          element={<BasketPage moviesId={moviesId} priceBasket={priceBasket} />}
+        />
       </Routes>
       {/* US 5 Page */}
 

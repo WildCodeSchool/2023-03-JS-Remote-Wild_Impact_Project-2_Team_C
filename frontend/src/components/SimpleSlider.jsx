@@ -1,11 +1,26 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
 import "./slick.css";
 import "./slick-theme.css";
-import films from "../data/films";
+
 import ImageVote from "./ImageVote";
 
 function SimpleSlider({ title, propriete, value }) {
+  const [films, setFilms] = useState([]);
+
+  useEffect(() => {
+    fetch(
+      `${
+        import.meta.env.VITE_BACKEND_URL
+      }/carrousel?type=${propriete}&genre=${value}`
+    )
+      .then((res) => res.json())
+      .then((data) => setFilms(data))
+      .catch((err) => console.error(err));
+  }, []);
+
   const responsive = [
     {
       breakpoint: 768,
@@ -39,19 +54,13 @@ function SimpleSlider({ title, propriete, value }) {
           slidesToScroll={3}
           responsive={responsive}
         >
-          {films
-            .filter((film) => {
-              if (propriete === "genre_ids") {
-                return value.includes(film[propriete]);
-              }
-              if (propriete === "original_language") {
-                return value !== film[propriete];
-              }
-              return film[propriete] >= value;
-            })
-            .map((film) => {
-              return <ImageVote film={film} />;
-            })}
+          {films.map((film) => {
+            return (
+              <Link to={`/Description/${film.id}`}>
+                <ImageVote film={film} />
+              </Link>
+            );
+          })}
         </Slider>
       </div>
     </div>

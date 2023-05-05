@@ -22,12 +22,12 @@ function SearchPage() {
   }, [genre, title]);
 
   return (
-    <div>
+    <div className="SearchPageCenter">
       <Filter filter={genre} handleFilter={setGenre} type="genres" />
-      <label>
-        Trouvez par titre
+      <label className="search-bar">
         <input
           type="text"
+          placeholder="🔎 Type the name of your movie"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />

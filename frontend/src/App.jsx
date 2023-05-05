@@ -40,7 +40,13 @@ function App() {
         {/** US 4 Page */}
         <Route
           path="/Basket"
-          element={<BasketPage moviesId={moviesId} priceBasket={priceBasket} />}
+          element={
+            <BasketPage
+              moviesId={moviesId}
+              priceBasket={priceBasket}
+              setPriceBasket={setPriceBasket}
+            />
+          }
         />
       </Routes>
       {/* US 5 Page */}

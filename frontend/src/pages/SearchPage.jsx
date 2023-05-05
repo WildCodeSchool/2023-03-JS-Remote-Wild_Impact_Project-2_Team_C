@@ -6,32 +6,18 @@ import "../styles/SearchPage.scss";
 
 function SearchPage() {
   const [films, setfilms] = useState([]);
-  const [filter, setFilter] = useState({
-    type: "",
-    genre: "",
-  });
+  const [genre, setGenre] = useState("");
 
   useEffect(() => {
-    if (filter.genre === "") {
-      fetch(`${import.meta.env.VITE_BACKEND_URL}/films`)
-        .then((res) => res.json())
-        .then((data) => setfilms(data))
-        .catch((err) => console.error(err));
-    } else {
-      fetch(
-        `${import.meta.env.VITE_BACKEND_URL}/films?type=${filter.type}&genre=${
-          filter.genre
-        }`
-      )
-        .then((res) => res.json())
-        .then((data) => setfilms(data))
-        .catch((err) => console.error(err));
-    }
-  }, [filter]);
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/films`)
+      .then((res) => res.json())
+      .then((data) => setfilms(data))
+      .catch((err) => console.error(err));
+  }, [genre]);
 
   return (
     <div>
-      <Filter filter={filter} handleFilter={setFilter} />
+      <Filter filter={genre} handleFilter={setGenre} type="genres" />
       {films.map((film) => {
         return (
           <Link key={film.id} to={`/Description/${film.id}`}>

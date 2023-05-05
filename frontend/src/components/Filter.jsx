@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-function Filter({ handleFilter, filter }) {
+function Filter({ handleFilter, filter, type }) {
   const [genres, setGenres] = useState([]);
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_BACKEND_URL}/genres`)
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/${type}`)
       .then((res) => res.json())
       .then((data) => setGenres(data))
       .catch((err) => console.error(err));
@@ -12,17 +12,13 @@ function Filter({ handleFilter, filter }) {
   return (
     <div>
       <select
-        name="genres"
-        id="genres"
-        onChange={(event) =>
-          handleFilter({ type: "genre_ids", genre: event.target.value })
-        }
-        value={filter.genre}
+        onChange={(event) => handleFilter(event.target.value)}
+        value={filter}
       >
         <option value="">All</option>
         {genres.map((genre) => (
-          <option key={genre.genre_ids} value={genre.genre_ids}>
-            {genre.genre_ids}
+          <option key={genre.label} value={genre.label}>
+            {genre.label}
           </option>
         ))}
       </select>

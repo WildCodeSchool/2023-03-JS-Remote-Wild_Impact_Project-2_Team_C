@@ -10,7 +10,7 @@ function Filter({ handleFilter, filter, type }) {
   }, []);
 
   return (
-    <div>
+    <div className="filter">
       <select
         onChange={(event) => handleFilter(event.target.value)}
         value={filter}

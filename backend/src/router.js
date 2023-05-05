@@ -102,7 +102,7 @@ router.get("/films/:id", (req, res) => {
 
 router.get("/genres", (req, res) => {
   database
-    .query("SELECT DISTINCT genre_ids FROM films")
+    .query("SELECT DISTINCT genre_ids AS label FROM films")
     .then(([genre]) => {
       res.status(200).json(genre);
     })

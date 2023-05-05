@@ -48,10 +48,9 @@ function App() {
             />
           }
         />
+        {/* US 5 Page */}
+        <Route path="/Contact" element={<ContactForm />} />
       </Routes>
-      {/* US 5 Page */}
-
-      <ContactForm />
     </Router>
   );
 }

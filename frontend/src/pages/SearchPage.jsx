@@ -10,11 +10,16 @@ function SearchPage() {
   const [title, setTitle] = useState("");
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_BACKEND_URL}/films`)
+    let url = `${import.meta.env.VITE_BACKEND_URL}/films?`;
+
+    if (genre !== "") url += `genre=${genre}&`;
+    if (title !== "") url += `title=${title}&`;
+
+    fetch(url)
       .then((res) => res.json())
       .then((data) => setfilms(data))
       .catch((err) => console.error(err));
-  }, [genre]);
+  }, [genre, title]);
 
   return (
     <div>

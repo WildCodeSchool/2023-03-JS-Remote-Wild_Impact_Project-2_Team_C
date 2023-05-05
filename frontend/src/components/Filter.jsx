@@ -10,7 +10,7 @@ function Filter({ handleFilter, filter }) {
   }, []);
 
   return (
-    <div>
+    <div className="filter">
       <select
         name="genres"
         id="genres"

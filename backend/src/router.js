@@ -18,7 +18,7 @@ router.get("/carrousel", (req, res) => {
   const value = [];
   if (req.query.type === "genre_ids") {
     url += " WHERE genre_ids IN  (?) LIMIT 8";
-    value.push(req.query.genre);
+    value.push(req.query.genre.split(","));
   }
   if (req.query.type === "original_language") {
     url += " WHERE original_language != 'en' LIMIT 8";

@@ -22,7 +22,7 @@ function SearchPage() {
   }, [genre, title]);
 
   return (
-    <div className="SearchPageCenter">
+    <div>
       <Filter filter={genre} handleFilter={setGenre} type="genres" />
       <label className="search-bar">
         <input

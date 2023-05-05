@@ -29,10 +29,10 @@ function ContactForm() {
 
   return (
     <div className="form">
-      <h6>Contact us</h6>
       <div className="client">
+        <h1>Contact us</h1>
+        Name:
         <label id="Fullname">
-          Name:
           <input
             type="text"
             name="name"
@@ -40,8 +40,8 @@ function ContactForm() {
             onChange={(e) => setName(e.target.value)}
           />
         </label>
+        Email:
         <label id="Email">
-          Email:
           <input
             type="email"
             value={email}
@@ -50,8 +50,8 @@ function ContactForm() {
         </label>
       </div>
       <div className="envoi">
+        Message:
         <div className="divmessage">
-          message:
           <textarea
             className="textarea"
             value={message}

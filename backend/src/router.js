@@ -13,6 +13,10 @@ database
     console.error(err);
   });
 
+const checkWhereOrAnd = (url) => {
+  return url.includes("WHERE") ? "AND" : "WHERE";
+};
+
 router.get("/carrousel", (req, res) => {
   let url = "SELECT * FROM films";
   const value = [];
@@ -43,25 +47,30 @@ router.get("/carrousel", (req, res) => {
 router.get("/films", (req, res) => {
   let url = "SELECT * FROM films";
   const value = [];
+
   // Mon filtre GENRE
-  if (req.query.type === "genre_ids") {
+  if (req.query.genre) {
     url += " WHERE genre_ids = ? ";
     value.push(req.query.genre);
   }
+
   // Mon input RECHERCHE
-  if (req.query.type === "title") {
-    url += " WHERE title = ? ";
-    value.push(req.query.genre);
+  if (req.query.title) {
+    url += ` ${checkWhereOrAnd(url)} title LIKE ? `;
+    value.push(`${req.query.title}%`);
   }
+
   // Mon filtre PRICE ET DATE =>
-  if (req.query.type === "price") {
-    url += " WHERE price >= ? ";
-    value.push(req.query.genre);
+  if (req.query.price) {
+    url += ` ${checkWhereOrAnd(url)} price >= ? `;
+    value.push(req.query.price);
   }
-  if (req.query.type === "release_date") {
-    url += " WHERE release_date LIKE ?";
-    value.push(`${req.query.genre}%`);
+
+  if (req.query.release) {
+    url += ` ${checkWhereOrAnd(url)} release_date LIKE ?`;
+    value.push(`${req.query.release}%`);
   }
+
   database
     .query(url, value)
     .then(([films]) => {
@@ -93,7 +102,7 @@ router.get("/films/:id", (req, res) => {
 
 router.get("/genres", (req, res) => {
   database
-    .query("SELECT DISTINCT genre_ids FROM films")
+    .query("SELECT DISTINCT genre_ids AS label FROM films")
     .then(([genre]) => {
       res.status(200).json(genre);
     })

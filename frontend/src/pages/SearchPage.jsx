@@ -7,6 +7,7 @@ import "../styles/SearchPage.scss";
 function SearchPage() {
   const [films, setfilms] = useState([]);
   const [genre, setGenre] = useState("");
+  const [title, setTitle] = useState("");
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_BACKEND_URL}/films`)
@@ -18,6 +19,14 @@ function SearchPage() {
   return (
     <div>
       <Filter filter={genre} handleFilter={setGenre} type="genres" />
+      <label>
+        Trouvez par titre
+        <input
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+      </label>
       {films.map((film) => {
         return (
           <Link key={film.id} to={`/Description/${film.id}`}>
